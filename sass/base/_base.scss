@@ -3,10 +3,17 @@
 *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-html,
 body {
-  position: relative;
-  height: 100%;
+  font-weight: 400;
+  font-family: $font-badScript;
+  font-size: 62.5%;
+  line-height: 1.2;
+  color: $grey-light1;
+  overflow-x: hidden;
+  background-color: $grey-dark;
+  background-image: url(../../assets/SVGs/background.svg);
+  background-size: cover;
 }
