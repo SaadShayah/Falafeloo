@@ -1,5 +1,5 @@
 {
-  "name": "natours",
+  "name": "falafeelo_website",
   "version": "1.0.0",
   "description": "landing page for natours",
   "main": "index.js",
@@ -22,7 +22,10 @@
     "postcss-cli": "^8.3.1"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "lodash": "^4.17.21",
-    "tailwindcss": "^2.2.7"
+    "vue": "^3.2.6",
+    "vue-carousel-3d": "^1.0.1"
   }
 }
