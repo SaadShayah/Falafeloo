@@ -1,0 +1,81 @@
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  width: 75vw;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  overflow-y: scroll;
+  transition: all 0.5s;
+
+  &__elem {
+    height: 12rem;
+    width: 80%;
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+    background-color: purple;
+    box-shadow: 10px 30px 10px $grey-dark;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: -2.7rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      bottom: 0;
+      background: transparent;
+      height: 4rem;
+      width: 40rem;
+
+      box-shadow: inset 0 -20px 30px $red-dark1;
+      transform: rotate(9deg);
+    }
+
+    &__title {
+      font-size: 1.7rem;
+      font-family: $font-russo;
+      text-align: center;
+      position: absolute;
+      bottom: 1.6rem;
+      left: 30%;
+      transform: rotateZ(10deg);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    margin: -35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    filter: blur(20px);
+    z-index: 9999;
+  }
+}
+
+.hide {
+  transition: all 0.5s;
+  transform: translateX(-20rem);
+  visibility: hidden;
+}
+
+.show {
+  transition: all 0.5s;
+  transform: translateX(0rem);
+  visibility: visible;
+}

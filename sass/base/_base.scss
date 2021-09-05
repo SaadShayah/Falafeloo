@@ -9,11 +9,26 @@
 body {
   font-weight: 400;
   font-family: $font-badScript;
-  font-size: 62.5%;
+  font-size: 35%;
   line-height: 1.2;
   color: $grey-light1;
   overflow-x: hidden;
   background-color: $grey-dark;
   background-image: url(../../assets/SVGs/background.svg);
   background-size: cover;
+  position: relative;
 }
+
+// .logo-container {
+//   height: 200px;
+//   width: 100%;
+//   position: fixed;
+//   bottom: 0;
+//   right: 0;
+//   z-index: 99999;
+
+//   img {
+//     height: 100%;
+//     width: 100%;
+//   }
+// }

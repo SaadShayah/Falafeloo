@@ -8,6 +8,18 @@
       content="width=device-width,
     initial-scale=1.0,minimum-scale=1, maximum-scale=1"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>falafeelo</title>
   </head>
@@ -15,7 +27,7 @@
   <body>
     <header>
       <div id="example">
-        <carousel-3d :autoplay="true" :autoplay-timeout="5000" :display="3">
+        <!-- <carousel-3d :autoplay="true" :autoplay-timeout="5000" :display="3">
           <slide v-for="(slide, i) in slides" :index="i">
             <span class="title">You know</span>
             <p>
@@ -23,10 +35,224 @@
               in the world.
             </p>
           </slide>
-        </carousel-3d>
+        </carousel-3d> -->
       </div>
+      <div class="hero">
+        <p class="hero__bg">Фалафель</p>
+        <p class="hero__sml">
+          Горох, специальная приправа помидор, ТХИНА , айзберг салат,огурец,
+          мята
+        </p>
+        <button class="menu-btn">Закажите еду на дом</button>
+      </div>
+
+      <button id="burger" class="open-main-nav">
+        <span class="burger"></span>
+        <span class="burger-text">Menu</span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li>
+            <a href="#">About me</a>
+          </li>
+          <li>
+            <a href="#">Speaker &amp; Writer</a>
+          </li>
+          <li>
+            <a href="#">Work</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="navigation-bar">
+        <div class="rectangle"></div>
+        <div class="container"></div>
+
+        <ul class="navs">
+          <li class="navs__item">
+            <input
+              type="radio"
+              class="navs__item__radio"
+              name="size"
+              id="home"
+            />
+            <label for="home" class="navs__item__label"> home</label>
+          </li>
+          <li class="navs__item">
+            <input
+              type="radio"
+              class="navs__item__radio"
+              name="size"
+              id="menu"
+            />
+            <label for="menu" class="navs__item__label"> menu</label>
+          </li>
+          <li class="navs__item">
+            <input
+              type="radio"
+              class="navs__item__radio"
+              name="size"
+              id="contact"
+            />
+            <label for="contact" class="navs__itme__label"> contact</label>
+          </li>
+          <li class="navs__item">
+            <input
+              type="radio"
+              class="navs__item__radio"
+              name="size"
+              id="about"
+            />
+            <label for="about" class="navs__item__label"> about</label>
+          </li>
+        </ul>
+      </div>
+      <div class="side-bar" id="sideBar">
+      <div class="side-bar__elem"
+          <p class="side-bar__elem__title">Broasteds</p>
+          <img src="assets/images/broasted_ctg.jpg" alt="Broasteds" />
+        </div>
+        <div class="side-bar__elem">
+          <p class="side-bar__elem__title">Falafel</p>
+          <img src="assets/images/falafel_ctg.jpg" alt="" />
+        </div>
+        <div class="side-bar__elem">
+          <p class="side-bar__elem__title">Apptizers</p>
+          <img src="assets/images/apptizers_ctg.jpg" alt="Apptizers" />
+        </div>
+        <div class="side-bar__elem">
+          <p class="side-bar__elem__title">Shawarma</p>
+          <img src="assets/images/shawarma_ctg.jpg" alt="Shawarma" />
+        </div>
+        <div class="side-bar__elem">
+          <p class="side-bar__elem__title">Cold Drinks</p>
+          <img src="assets/images/cold_drinks_ctg.jpeg" alt="Cold Drinks" />
+        </div>
+        <div class="side-bar__elem">
+          <p class="side-bar__elem__title">Hot Drinks</p>
+          <img src="assets/images/hot_drinks_ctg.jpg" alt="Hot Drinks" />
+        </div>
+      </div>
+      <button class="side-btn">Menu</button>
+      <!-- <div class="logo-container">
+        <img src="assets/SVGs/bottom_logo.svg" alt="" />
+      </div> -->
     </header>
+    <main>
+      <section class="menu">
+        <div class="firstContainer">
+          <div class="mealItem">
+            <p class="mealItem__price">350p</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/food_1600х1200.jpg"
+                alt=""
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto,
+                voluptatum dicta magnam cupiditate id unde incidunt error iure
+                nam non tenetur
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">amazing meal</p>
+          </div>
+          <div class="mealItem">
+            <p class="mealItem__price">350p</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/food_1600х1200.jpg"
+                alt=""
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto,
+                voluptatum dicta magnam cupiditate id unde incidunt error iure
+                nam non tenetur
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">amazing meal</p>
+          </div>
+          <div class="mealItem">
+            <p class="mealItem__price">350p</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/food_1600х1200.jpg"
+                alt=""
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto,
+                voluptatum dicta magnam cupiditate id unde incidunt error iure
+                nam non tenetur
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">amazing meal</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer__navs">
+          <p class="footer__navs__title">Follow us</p>
+          <ul>
+            <li>
+              <a href="#" class="footer__navs__element">
+                <img src="assets/SVGs/facebook_icon.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__navs__element"
+                ><img src="assets/SVGs/instagram_lcon.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#" class="footer__navs__element"
+                ><img src="assets/SVGs/youtube_icon.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#" class="footer__navs__element"
+                ><img src="assets/SVGs/tiktok_icon.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="246"
+              height="192"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe
+            ><a href="https://www.whatismyip-address.com/divi-discount/"></a
+            ><br /><style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                height: 192px;
+                width: 246px;
+              }</style
+            ><a href="https://www.embedgooglemap.net">maps for websites</a
+            ><style>
+
+            </style>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="JS/main.js" type="module"></script>
+    <script src="JS/main.js"></script>
   </body>
 </html>

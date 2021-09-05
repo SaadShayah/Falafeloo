@@ -1,0 +1,53 @@
+.footer-container {
+  background: linear-gradient(
+    189.83deg,
+    rgba(63, 2, 2, 0.5) 14.34%,
+    rgba(252, 12, 12, 0.3) 46.28%,
+    rgba(84, 12, 12, 0.5) 84.82%
+  );
+  border-radius: 10px 10px 0 0;
+  box-shadow: inset -1px -1px 3px $grey-light3;
+
+  .footer__navs {
+    display: flex;
+    padding: 2rem 1rem 0 1rem;
+    position: relative;
+    margin: 0 1rem 1rem 0;
+
+    ul {
+      list-style: none;
+      display: flex;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    &__element {
+      font-size: 0.8rem;
+      margin: 0 0.5rem;
+
+      img {
+        fill: white;
+        height: 1.5rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 80%;
+      background-color: #fff;
+      position: absolute;
+      bottom: -1px;
+    }
+  }
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 192px;
+  width: 246px;
+  border-radius: 20px;
+}
