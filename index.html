@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
       content="width=device-width,
-    initial-scale=1.0,minimum-scale=1, maximum-scale=1"
+    initial-scale=1.0,minimum-scale=1"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +26,32 @@
   <body>
     <header>
       <div id="example">
+        <carousel-3d :autoplay="true" :autoplay-timeout="5000" :display="3">
+          <slide v-for="(slide, i) in slides" :index="i">
+            <span class="title">You know</span>
+            <p>
+              You know, being a test pilot isn't always the healthiest business
+              in the world.
+            </p>
+          </slide>
+        </carousel-3d>
+        <script type="module">
+          // import Vue from "node_modules/vue";
+          import Carousel3d from "node_modules/vue-carousel-3d";
+
+          Vue.use(Carousel3d);
+          new Vue({
+            el: "#example",
+            data: { 
+              slides: 7,
+            },
+            components: {
+              "carousel-3d": window["carousel-3d"].Carousel3d,
+              slide: window["carousel-3d"].Slide,
+            },
+          });
+        </script>
+
         <!-- <carousel-3d :autoplay="true" :autoplay-timeout="5000" :display="3">
           <slide v-for="(slide, i) in slides" :index="i">
             <span class="title">You know</span>
@@ -112,8 +137,8 @@
           </li>
         </ul>
       </div>
-      <div class="side-bar" id="sideBar">
-      <div class="side-bar__elem"
+      <div class="side-bar hide" id="sideBar">
+        <div class="side-bar__elem">
           <p class="side-bar__elem__title">Broasteds</p>
           <img src="assets/images/broasted_ctg.jpg" alt="Broasteds" />
         </div>
@@ -147,7 +172,7 @@
       <section class="menu">
         <div class="firstContainer">
           <div class="mealItem">
-            <p class="mealItem__price">350p</p>
+            <p class="mealItem__price">395p</p>
             <figure class="mealItem__main">
               <img
                 src="assets/images/food_1600х1200.jpg"
@@ -155,15 +180,15 @@
                 class="mealItem__main__img"
               />
               <figcaption class="mealItem__main__caption">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto,
-                voluptatum dicta magnam cupiditate id unde incidunt error iure
-                nam non tenetur
+                Курица, Чесночный соус, помидоры, солёные огурцы, кетчуп,
+                специальный соус, картофель, сыр, салат с зеленью. Готовим на
+                мангале
               </figcaption>
             </figure>
-            <p class="mealItem__title">amazing meal</p>
+            <p class="mealItem__title">Шаурма от шеф повара</p>
           </div>
           <div class="mealItem">
-            <p class="mealItem__price">350p</p>
+            <p class="mealItem__price">490 ₽</p>
             <figure class="mealItem__main">
               <img
                 src="assets/images/food_1600х1200.jpg"
@@ -171,15 +196,26 @@
                 class="mealItem__main__img"
               />
               <figcaption class="mealItem__main__caption">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto,
-                voluptatum dicta magnam cupiditate id unde incidunt error iure
-                nam non tenetur
+                Курица, чесночный соус, помидор, солёный огурцы, кетчуп,
+                картофель, сыр, салат с зеленью. Готовится на мангале
               </figcaption>
             </figure>
-            <p class="mealItem__title">amazing meal</p>
+            <p class="mealItem__title">Шаурма по-арабски</p>
           </div>
           <div class="mealItem">
-            <p class="mealItem__price">350p</p>
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/food_1600х1200.jpg"
+                alt=""
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Картошка фри большая порция</p>
+          </div>
+          <div class="mealItem">
+            <p class="mealItem__price">390 ₽</p>
             <figure class="mealItem__main">
               <img
                 src="assets/images/food_1600х1200.jpg"
@@ -187,12 +223,79 @@
                 class="mealItem__main__img"
               />
               <figcaption class="mealItem__main__caption">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto,
-                voluptatum dicta magnam cupiditate id unde incidunt error iure
-                nam non tenetur
+                Фалафель, приправа, помидор, айсберг салат, солёные огурцы,
+                мята, соус тхина
               </figcaption>
             </figure>
-            <p class="mealItem__title">amazing meal</p>
+            <p class="mealItem__title">Фалафель</p>
+          </div>
+          <div class="mealItem">
+            <p class="mealItem__price">295 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/food_1600х1200.jpg"
+                alt=""
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Фалафель</p>
+          </div>
+        </div>
+
+        <div class="firstContainer">
+          <div class="mealItem">
+            <p class="mealItem__price">600 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/food_1600х1200.jpg"
+                alt=""
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Крылышки, Картошка фри, Чесночный соус, кетчуп (8 шт.)
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Крылышки хрустящий комбо</p>
+          </div>
+          <div class="mealItem">
+            <p class="mealItem__price">1150 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/food_1600х1200.jpg"
+                alt=""
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Крылышки хрустящий (16 шт.), Картошка фри. Чесночный соус,
+                кетчуп
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Крылышки хрустящий комбо</p>
+          </div>
+          <div class="mealItem">
+            <p class="mealItem__price">400 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/food_1600х1200.jpg"
+                alt=""
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">8 шт.</figcaption>
+            </figure>
+            <p class="mealItem__title">Крылышки хрустящие S</p>
+          </div>
+          <div class="mealItem">
+            <p class="mealItem__price">800 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/food_1600х1200.jpg"
+                alt=""
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">16 шт.</figcaption>
+            </figure>
+            <p class="mealItem__title">Крылышки хрустящие M</p>
           </div>
         </div>
       </section>
@@ -245,9 +348,7 @@
                 width: 246px;
               }</style
             ><a href="https://www.embedgooglemap.net">maps for websites</a
-            ><style>
-
-            </style>
+            ><style></style>
           </div>
         </div>
       </div>

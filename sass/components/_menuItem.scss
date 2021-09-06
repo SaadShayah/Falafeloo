@@ -1,10 +1,13 @@
 .firstContainer {
   width: 80vw;
   @include center;
-  padding: 1rem;
+  padding: 1rem 0;
   position: relative;
   border-radius: 20px;
   z-index: 99999;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-column-gap: 1rem;
 
   background: linear-gradient(
     189.83deg,
@@ -25,13 +28,17 @@
     top: -2.99rem;
     right: 50%;
     margin-right: -80px;
-    // margin-right: -105px;
     border-radius: 15px 15px 0 0;
     text-align: center;
     font-size: 1.5rem;
     padding: 0.5rem 0;
     font-family: $font-russo;
     letter-spacing: 0.1rem;
+
+    @media only screen and (min-width: 750px) {
+      margin-right: 0;
+      right: 15%;
+    }
   }
 }
 
@@ -40,7 +47,7 @@
   position: relative;
   height: 8rem;
   width: 12rem;
-  margin: 2rem 0;
+  margin: 2rem auto;
 
   &__price {
     position: absolute;
@@ -52,9 +59,10 @@
     border-radius: 10px 10px 0 0;
     font-size: 1rem;
     text-align: center;
-    padding: auto 0;
+    padding: 0.1rem 0;
     color: red;
     font-weight: 700;
+    font-family: $font-russo;
   }
 
   &__main {
@@ -85,5 +93,24 @@
     font-family: $font-russo;
     text-shadow: 3px 3px 0 $red-dark2, -1px -1px 0 $red-dark2,
       1px -1px 0 $red-dark2, -1px 1px 0 $red-dark2, 1px 1px 0 $red-dark2;
+
+    @media only screen and (min-width: 1000px) {
+      font-size: 1.7rem;
+    }
+  }
+
+  @media only screen and(min-width:350px) {
+    height: 10rem;
+    width: 15rem;
+  }
+
+  @media only screen and (min-width: $bp-1) {
+    height: 12rem;
+    width: 18rem;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    height: 15rem;
+    width: 20rem;
   }
 }

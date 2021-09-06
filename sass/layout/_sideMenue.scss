@@ -3,50 +3,62 @@
   flex-direction: column;
   position: fixed;
   height: 100vh;
-  width: 75vw;
+  width: 100vw;
   top: 0;
   left: 0;
   z-index: 999999;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   overflow-y: scroll;
   transition: all 0.5s;
+  visibility: visible;
 
   &__elem {
-    height: 12rem;
-    width: 80%;
+    height: 10rem;
+    width: 100%;
     clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
-    background-color: purple;
     box-shadow: 10px 30px 10px $grey-dark;
     background-size: cover;
     background-position: center;
     position: relative;
 
     &:not(:first-child) {
-      margin-top: -2.7rem;
+      margin-top: -2.5rem;
     }
 
     &::before {
       content: "";
       position: absolute;
       left: -2rem;
-      bottom: 0;
+      bottom: -1.5rem;
       background: transparent;
       height: 4rem;
       width: 40rem;
+      transform: rotateZ(12deg);
 
       box-shadow: inset 0 -20px 30px $red-dark1;
-      transform: rotate(9deg);
+
+      @media only screen and(min-width:300px) {
+        transform: rotate(10deg);
+        bottom: -0.4rem;
+      }
     }
 
     &__title {
-      font-size: 1.7rem;
+      font-size: 1.4rem;
       font-family: $font-russo;
       text-align: center;
       position: absolute;
-      bottom: 1.6rem;
-      left: 30%;
-      transform: rotateZ(10deg);
+      bottom: 1.7rem;
+      left: 50%;
+      margin-left: -4rem;
+      transform: rotateZ(10.5deg);
+
+      @media only screen and(min-width:300px) {
+        transform: rotateZ(9deg);
+        bottom: 1.4rem;
+        font-size: 1.7rem;
+      }
     }
 
     img {
@@ -66,16 +78,38 @@
     filter: blur(20px);
     z-index: 9999;
   }
+
+  @media only screen and(min-width:300px) {
+    width: 85vw;
+  }
+
+  @media only screen and(min-width:450px) {
+    width: 55vw;
+  }
+
+  @media only screen and(min-width:650px) {
+    width: 40vw;
+  }
+  @media only screen and(min-width:750px) {
+    width: 35vw;
+  }
+
+  @media only screen and(min-width:1000px) {
+    width: 25vw;
+  }
+  @media only screen and(min-width:1600px) {
+    width: 16vw;
+  }
 }
 
 .hide {
   transition: all 0.5s;
   transform: translateX(-20rem);
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 .show {
   transition: all 0.5s;
   transform: translateX(0rem);
-  visibility: visible;
+  visibility: visible !important;
 }
