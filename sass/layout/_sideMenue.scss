@@ -12,6 +12,14 @@
   overflow-y: scroll;
   transition: all 0.5s;
   visibility: visible;
+  border-radius: 0 25px 25px 0;
+  padding: 1rem 1rem 0 0;
+  background: linear-gradient(
+    189.83deg,
+    rgba(63, 2, 2, 0.7) 14.34%,
+    rgba(252, 12, 12, 0.5) 46.28%,
+    rgba(84, 12, 12, 0.7) 84.82%
+  );
 
   &__elem {
     height: 10rem;
@@ -21,6 +29,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    border: 1px solid black;
 
     &:not(:first-child) {
       margin-top: -2.5rem;
@@ -90,6 +99,7 @@
   @media only screen and(min-width:650px) {
     width: 40vw;
   }
+
   @media only screen and(min-width:750px) {
     width: 35vw;
   }
@@ -97,6 +107,7 @@
   @media only screen and(min-width:1000px) {
     width: 25vw;
   }
+
   @media only screen and(min-width:1600px) {
     width: 16vw;
   }

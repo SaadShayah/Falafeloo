@@ -15,8 +15,9 @@ body {
   overflow-x: hidden;
   background-color: $grey-dark;
   background-image: url(../../assets/SVGs/background.svg);
-  background-size: cover;
+  background-repeat: repeat;
   position: relative;
+  background-attachment: fixed;
 
   @media only screen and (min-width: $bp-1) {
     font-size: 62.5%;

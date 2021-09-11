@@ -25,7 +25,7 @@
 
   <body>
     <header>
-      <div id="example">
+      <!-- <div id="example">
         <carousel-3d :autoplay="true" :autoplay-timeout="5000" :display="3">
           <slide v-for="(slide, i) in slides" :index="i">
             <span class="title">You know</span>
@@ -51,17 +51,79 @@
             },
           });
         </script>
-
-        <!-- <carousel-3d :autoplay="true" :autoplay-timeout="5000" :display="3">
-          <slide v-for="(slide, i) in slides" :index="i">
-            <span class="title">You know</span>
-            <p>
-              You know, being a test pilot isn't always the healthiest business
-              in the world.
-            </p>
-          </slide>
-        </carousel-3d> -->
+      </div> -->
+      <!-- 
+    <div class="slider-container">
+      <div class="slider-control left inactive"></div>
+      <div class="slider-control right"></div>
+      <ul class="slider-pagi"></ul>
+      <div class="slider">
+        <div class="slide slide-0 active">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+              <path class="slide__overlay-path" d="M0,0 100,0 350,405 0,405" />
+            </svg>
+            <div class="slide__text">
+              <h2 class="slide__text-heading">Project name 1</h2>
+              <p class="slide__text-desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Distinctio veniam minus illo debitis nihil animi facere,
+                doloremque voluptate tempore quia.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slide slide-1">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+              <path class="slide__overlay-path" d="M0,0 100,0 350,405 0,405" />
+              <div class="slide__text">
+                <h2 class="slide__text-heading">Project name 2</h2>
+                <p class="slide__text-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Distinctio veniam minus illo debitis nihil animi facere,
+                  doloremque voluptate tempore quia.
+                </p>
+              </div>
+          </div>
+        </div>
+        <div class="slide slide-2">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+              <path class="slide__overlay-path" d="M0,0 100,0 350,405 0,405" />
+              <div class="slide__text">
+                <h2 class="slide__text-heading">Project name 3</h2>
+                <p class="slide__text-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Distinctio veniam minus illo debitis nihil animi facere,
+                  doloremque voluptate tempore quia.
+                </p>
+              </div>
+          </div>
+        </div>
+        <div class="slide slide-3">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+              <path class="slide__overlay-path" d="M0,0 100,0 350,405 0,405" />
+              <div class="slide__text">
+                <h2 class="slide__text-heading">Project name 4</h2>
+                <p class="slide__text-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Distinctio veniam minus illo debitis nihil animi facere,
+                  doloremque voluptate tempore quia. Lorem ipsum dolor sit amet,
+                  consectetur adipisicing elit. Distinctio veniam minus illo
+                  debitis nihil animi facere, doloremque voluptate tempore quia.
+                </p>
+              </div>
+          </div>
+        </div>
       </div>
+    </div>
+ -->
       <div class="hero">
         <p class="hero__bg">Фалафель</p>
         <p class="hero__sml">
@@ -169,191 +231,190 @@
       </div> -->
     </header>
     <main>
-      <section class="menu">
-        <div class="firstContainer">
-          <div class="mealItem">
-            <p class="mealItem__price">395p</p>
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/food_1600х1200.jpg"
-                alt=""
-                class="mealItem__main__img"
-              />
-              <figcaption class="mealItem__main__caption">
-                Курица, Чесночный соус, помидоры, солёные огурцы, кетчуп,
-                специальный соус, картофель, сыр, салат с зеленью. Готовим на
-                мангале
-              </figcaption>
-            </figure>
-            <p class="mealItem__title">Шаурма от шеф повара</p>
-          </div>
-          <div class="mealItem">
-            <p class="mealItem__price">490 ₽</p>
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/food_1600х1200.jpg"
-                alt=""
-                class="mealItem__main__img"
-              />
-              <figcaption class="mealItem__main__caption">
-                Курица, чесночный соус, помидор, солёный огурцы, кетчуп,
-                картофель, сыр, салат с зеленью. Готовится на мангале
-              </figcaption>
-            </figure>
-            <p class="mealItem__title">Шаурма по-арабски</p>
-          </div>
-          <div class="mealItem">
-            <p class="mealItem__price">200 ₽</p>
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/food_1600х1200.jpg"
-                alt=""
-                class="mealItem__main__img"
-              />
-              <figcaption class="mealItem__main__caption"></figcaption>
-            </figure>
-            <p class="mealItem__title">Картошка фри большая порция</p>
-          </div>
-          <div class="mealItem">
-            <p class="mealItem__price">390 ₽</p>
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/food_1600х1200.jpg"
-                alt=""
-                class="mealItem__main__img"
-              />
-              <figcaption class="mealItem__main__caption">
-                Фалафель, приправа, помидор, айсберг салат, солёные огурцы,
-                мята, соус тхина
-              </figcaption>
-            </figure>
-            <p class="mealItem__title">Фалафель</p>
-          </div>
-          <div class="mealItem">
-            <p class="mealItem__price">295 ₽</p>
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/food_1600х1200.jpg"
-                alt=""
-                class="mealItem__main__img"
-              />
-              <figcaption class="mealItem__main__caption"></figcaption>
-            </figure>
-            <p class="mealItem__title">Фалафель</p>
+      <section class="menu" id="TheMenu"></section>
+      <section class="about">
+        <p class="heading">
+          From the oldest city in the world (Aleppo, Syria) to the largest
+          country in the world Rusia
+        </p>
+        <div class="chapter">
+          <p class="chapter__paragraph">
+            Young people whose journey began fromthe oldest inhabited city in
+            the world12,200 years ago, according to UNESCO, to thelargest
+            country in the world. We carry with us the fragrant history of
+            AleppoAnd its natural flavors, which the city has knownfor over the
+            ages, in which flavors have developed, as well as the stories of
+            grandmothers, over morethan 122 centuries. It is long enough to
+            completethe whole oriental cuisine, and the Aleppocuisine in
+            particular
+          </p>
+          <div class="chapter__img">
+            <img src="assets/images/ " alt="" />
           </div>
         </div>
-
-        <div class="firstContainer">
-          <div class="mealItem">
-            <p class="mealItem__price">600 ₽</p>
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/food_1600х1200.jpg"
-                alt=""
-                class="mealItem__main__img"
-              />
-              <figcaption class="mealItem__main__caption">
-                Крылышки, Картошка фри, Чесночный соус, кетчуп (8 шт.)
-              </figcaption>
-            </figure>
-            <p class="mealItem__title">Крылышки хрустящий комбо</p>
+        <div class="chapter">
+          <div class="chapter__img">
+            <img src="assets/images/falafel_ctg.jpg" alt="" />
           </div>
-          <div class="mealItem">
-            <p class="mealItem__price">1150 ₽</p>
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/food_1600х1200.jpg"
-                alt=""
-                class="mealItem__main__img"
-              />
-              <figcaption class="mealItem__main__caption">
-                Крылышки хрустящий (16 шт.), Картошка фри. Чесночный соус,
-                кетчуп
-              </figcaption>
-            </figure>
-            <p class="mealItem__title">Крылышки хрустящий комбо</p>
-          </div>
-          <div class="mealItem">
-            <p class="mealItem__price">400 ₽</p>
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/food_1600х1200.jpg"
-                alt=""
-                class="mealItem__main__img"
-              />
-              <figcaption class="mealItem__main__caption">8 шт.</figcaption>
-            </figure>
-            <p class="mealItem__title">Крылышки хрустящие S</p>
-          </div>
-          <div class="mealItem">
-            <p class="mealItem__price">800 ₽</p>
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/food_1600х1200.jpg"
-                alt=""
-                class="mealItem__main__img"
-              />
-              <figcaption class="mealItem__main__caption">16 шт.</figcaption>
-            </figure>
-            <p class="mealItem__title">Крылышки хрустящие M</p>
+          <p class="chapter__paragraph">
+            In addition to being one of the most important knots on the
+            historically known Silk Road It also maintained its position as a
+            historically important commercial node, which made it acquaint
+            itself with international flavors and works to select the best and
+            the best, and then start cultivating it with the hands of its
+            farmers and the fertile lands of Syria. particular
+          </p>
+        </div>
+        <p class="heading">
+          We at Falafilo prepare these oriental recipes with their healthy
+          ingredients And its natural spices with a lot of love to make it
+          special and complete the story of oriental meals in Russia that you
+          must definitely try
+        </p>
+        <div class="chapter">
+          <p class="chapter__paragraph">
+            Aleppo spices are natural and healthy, away from artificial flavors,
+            flavor enhancers and preservatives Which scientific research has
+            proven that its continuous consumption leads to major health risks
+            that may not appear immediately.
+          </p>
+          <div class="chapter__img">
+            <img src="assets/images/falafel_ctg.jpg" alt="" />
           </div>
         </div>
+        <div class="chapter">
+          <div class="chapter__img">
+            <img src="assets/images/falafel_ctg.jpg" alt="" />
+          </div>
+          <p class="chapter__paragraph">
+            We at Falafello put health first along with distinctive flavor
+            Therefore, we use chicken and sheep meat (halal) with special
+            natural spices , which are the strongest in terms of flavor and
+            nutritional value to provide the body with its needs for a day full
+            of energy
+          </p>
+        </div>
+        <div class="chapter">
+          <p class="chapter__paragraph">
+            Aleppo cuisine is considered one of the most famous international
+            kitchens, historically and culturally, even today, where many types
+            of foods became famous and spread to the whole world. Such as
+            falafel, shawarma, kebab grilled on charcoal, and a lot of
+            appetizers and desserts specializing in pistachios, known globally
+            as Aleppo pistachios.
+          </p>
+          <div class="chapter__img">
+            <img src="assets/images/falafel_ctg.jpg" alt="" />
+          </div>
+        </div>
+        <p class="heading">
+          We at Flafilo seek to present the image and civilization of our city
+          to the people of Russia, who holds one of the oldest and greatest
+          civilizations in the world with its door a picture
+        </p>
+        <div class="chapter">
+          <div class="chapter__img">
+            <img src="assets/images/falafel_ctg.jpg" alt="" />
+          </div>
+          <p class="chapter__paragraph">
+            Our first step was Falafilo Restaurant, a fast food restaurant that
+            is famous in the East in general We also offer you meals from the
+            western kitchen with great attention to the details of flavor and
+            health. We re-introduce American and Western meals with natural
+            flavors with dispensing About flavor enhancers and preservatives
+            that are usually followed in western restaurants because we provide
+            our meals fresh and immediately prepared upon request.
+          </p>
+        </div>
+        <p class="heading">
+          We at Flavilo thank Russia and its loving people who embraced our
+          experience and were pleased with our delicious fast food that they are
+          not accustomed to.
+        </p>
+        <div class="chapter">
+          <div class="chapter__img">
+            <img src="assets/images/falafel_ctg.jpg" alt="" />
+          </div>
+          <p class="chapter__paragraph">
+            We at Flavilo share our success with local companies to provide
+            facilities to our customer as we have partnered with online ordering
+            and home delivery sites (Delivery club -......)
+          </p>
+        </div>
+        <p class="heading">
+          We strive to satisfy you and to present the whole Aleppian cuisine in
+          an honorable manner through the following steps in the future to
+          expand it from fast food to home meals And the distinctive oriental
+          sweets, thanks to your love and support.. the path of success
+          continues
+        </p>
       </section>
     </main>
     <footer>
       <div class="footer-container">
-        <div class="footer__navs">
-          <p class="footer__navs__title">Follow us</p>
-          <ul>
-            <li>
-              <a href="#" class="footer__navs__element">
-                <img src="assets/SVGs/facebook_icon.svg" alt="" />
-              </a>
+        <div class="contact-data">
+          <div class="tile">
+            <ion-icon name="time-outline" class="tile__icon"></ion-icon> 10AM -
+            11PM
+          </div>
+          <div class="tile">
+            <ion-icon name="call-outline" class="tile__icon"></ion-icon> +7(915)
+            200-08-09
+          </div>
+          <div class="tile">
+            <ion-icon name="mail-outline" class="tile__icon"></ion-icon>
+            falafeloo.ru@gmail.com
+          </div>
+          <ul class="footer__nav">
+            <li class="footer__nav__element">
+              <ion-icon name="logo-facebook"></ion-icon>
             </li>
-            <li>
-              <a href="#" class="footer__navs__element"
-                ><img src="assets/SVGs/instagram_lcon.svg" alt=""
-              /></a>
+            <li class="footer__nav__element">
+              <ion-icon name="logo-youtube"></ion-icon>
             </li>
-            <li>
-              <a href="#" class="footer__navs__element"
-                ><img src="assets/SVGs/youtube_icon.svg" alt=""
-              /></a>
+            <li class="footer__nav__element">
+              <ion-icon name="logo-instagram"></ion-icon>
             </li>
-            <li>
-              <a href="#" class="footer__navs__element"
-                ><img src="assets/SVGs/tiktok_icon.svg" alt=""
-              /></a>
+            <li class="footer__nav__element">
+              <ion-icon name="logo-tiktok"></ion-icon>
             </li>
           </ul>
         </div>
         <div class="mapouter">
           <div class="gmap_canvas">
             <iframe
-              width="246"
-              height="192"
+              width="250"
+              height="200"
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              frameborder="0"
+              frameborder=""
               scrolling="no"
               marginheight="0"
               marginwidth="0"
             ></iframe
-            ><a href="https://www.whatismyip-address.com/divi-discount/"></a
-            ><br /><style>
-              .mapouter {
-                position: relative;
-                text-align: right;
-                height: 192px;
-                width: 246px;
-              }</style
-            ><a href="https://www.embedgooglemap.net">maps for websites</a
-            ><style></style>
+            ><a href="https://123movies-to.org"></a><br />
+            <a href="https://www.embedgooglemap.net"
+              >interactive google map for website</a
+            >
           </div>
         </div>
       </div>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="https://unpkg.com/vue@next"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="JS/main.js"></script>
   </body>
 </html>
