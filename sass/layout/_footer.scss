@@ -52,6 +52,11 @@
     &:hover {
       color: $red;
     }
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: white;
+    }
     @media only screen and (max-width: 350px) {
       font-size: 1.2rem;
       margin-right: 1.5rem;

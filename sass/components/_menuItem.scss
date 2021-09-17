@@ -1,26 +1,49 @@
+#TheMenu {
+  margin-bottom: 10rem;
+}
+
 .firstContainer {
   width: 80vw;
   padding: 2rem 0;
   position: relative;
-  border-radius: 20px;
-  z-index: 99999;
+  border-radius: 30px;
+  z-index: 999;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
   grid-column-gap: 1rem;
-  margin: 6rem auto;
-
+  margin: 10rem auto;
   background: linear-gradient(
     189.83deg,
-    rgba(63, 2, 2, 0.5) 14.34%,
-    rgba(252, 12, 12, 0.3) 46.28%,
-    rgba(84, 12, 12, 0.5) 84.82%
+    rgba(85, 5, 5, 0.4) 14.34%,
+    rgba(202, 9, 9, 0.4) 46.28%,
+    rgba(122, 9, 9, 0.4) 84.82%
   );
+  box-shadow: 6px 6px 8px rgba(14, 12, 12, 0.45);
 
-  box-shadow: 2px 4px 8px rgba(14, 12, 12, 0.25);
-
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1px;
+    border-radius: 30px;
+    background: linear-gradient(
+      -350deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(0, 0, 0, 0.1) 35.43%,
+      rgba(253, 252, 252, 0.4) 85.82%,
+      rgba(0, 0, 0, 0.25) 98.58%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
   &__title {
     height: 3rem;
-    background: rgba(63, 2, 2, 0.5);
+    background: rgba(85, 5, 5, 0.4);
     z-index: -999;
     position: absolute;
     top: -2.99rem;
@@ -43,21 +66,21 @@
     }
   }
   @media only screen and (min-width: 750px) {
-    margin: 10rem auto;
+    margin: 14rem auto;
   }
   @media only screen and (min-width: 1000px) {
     grid-row-gap: 2rem;
-    margin: 10rem auto;
+    margin: 12rem auto;
     grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
   }
   @media only screen and (min-width: 1200px) {
-    margin: 10rem auto;
+    margin: 14rem auto;
     grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
   }
 }
 
 .mealItem {
-  display: block;
+  display: inline-block;
   position: relative;
   height: 8rem;
   width: 12rem;
@@ -90,14 +113,23 @@
       height: 100%;
       width: 100%;
       background-size: cover;
+      transition: filter 0.3s;
+
+      &:hover {
+        filter: blur(10px) brightness(85%);
+      }
+      &:hover + .mealItem__main__caption {
+        font-size: 1.7rem;
+      }
     }
 
     &__caption {
       position: absolute;
       bottom: 1rem;
       left: 0.5rem;
-      font-size: 0.9rem;
+      font-size: 1rem;
       width: 15rem;
+      transition: all 0.3s;
     }
   }
 
@@ -114,6 +146,7 @@
 
     @media only screen and (min-width: 1000px) {
       font-size: 1.7rem;
+      margin-top: 1.4rem;
     }
   }
 

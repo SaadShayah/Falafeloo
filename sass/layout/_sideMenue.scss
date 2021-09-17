@@ -13,7 +13,7 @@
   transition: all 0.5s;
   visibility: visible;
   border-radius: 0 25px 25px 0;
-  padding: 1rem 1rem 0 0;
+  padding: 3rem 1rem 0 0;
   background: linear-gradient(
     189.83deg,
     rgba(63, 2, 2, 0.7) 14.34%,
@@ -123,4 +123,14 @@
   transition: all 0.5s;
   transform: translateX(0rem);
   visibility: visible !important;
+}
+
+.close {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.5rem;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  border: 0;
 }

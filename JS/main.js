@@ -1,218 +1,159 @@
-// require("../node_modules/vue");
-// import Vue from "../node_modules/vue";
-// import Carousel3d from "./vue-carousel-3d";
-// import { Carousel3d, Slide } from "../node_modules/vue-carousel-3d";
-// require("../vue-carousel-3d");
-
-const home = document.getElementById("home");
-const contact = document.getElementById("contact");
-const about = document.getElementById("about");
-const container = document.querySelector(".container");
-const rectangle = document.querySelector(".rectangle");
-const sideBtn = document.querySelector(".side-btn");
-const ourSideBar = document.getElementById("sideBar");
-
-// Vue.use(Carousel3d);
-
-// new Vue({
-//   el: "#example",
-//   data: {
-//     slides: 7,
-//   },
-//   components: {
-//     "carousel-3d": window["carousel-3d"].Carousel3d,
-//     slide: window["carousel-3d"].Slide,
-//   },
-// });
-
-//---------------------------- THE SIDE NAVIGATION --------------------------//
-
-menu.addEventListener("click", function (event) {
-  container.style.transform = "translateY(-4.5rem)";
-  rectangle.style.height = "72vh";
-});
-
-home.addEventListener("click", function name(params) {
-  container.style.transform = "translateY(0)";
-  rectangle.style.height = "85vh";
-});
-
-contact.addEventListener("click", function name(params) {
-  container.style.transform = "translateY(-9rem)";
-  rectangle.style.height = "63vh";
-});
-
-about.addEventListener("click", function name(params) {
-  container.style.transform = "translateY(-14rem)";
-  rectangle.style.height = "54vh";
-});
-
-sideBtn.addEventListener("click", function name(params) {
-  ourSideBar.classList.remove("hide");
-  ourSideBar.classList.add("show");
-});
-
-//---------------------------- HANDELING CLICKS OUTSIDE OF THE SIDEBAR --------------------------//
-
-// var ignoreClickOnMeElement = document.getElementById("sideBar");
-
-// document.addEventListener("click", function (event) {
-//   var isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
-//   if (
-//     !isClickInsideElement &&
-//     !ignoreClickOnMeElement.classList.contains("hide")
-//   ) {
-//     ourSideBar.classList.remove("show");
-//     ourSideBar.classList.add("hide");
-//   }
-// });
-
-//---------------------------- THE BURGER NAVIGATION --------------------------//
-
+const home = document.getElementById("home"),
+  contact = document.getElementById("contact"),
+  about = document.getElementById("about"),
+  container = document.querySelector(".container"),
+  rectangle = document.querySelector(".rectangle"),
+  sideBtn = document.querySelector(".side-btn"),
+  header = document.querySelector(".header"),
+  closeBtn = document.querySelector(".close"),
+  aboutScetion = document.getElementById("aboutSection"),
+  footer = document.querySelector(".footer-container"),
+  theMenu = document.getElementById("TheMenu"),
+  ourSideBar = document.getElementById("sideBar"),
+  homeNav = document.getElementById("homeNav"),
+  menuNav = document.getElementById("menuNav"),
+  aboutNav = document.getElementById("aboutNav"),
+  contactNav = document.getElementById("contactNav"),
+  falafelBtn = document.getElementById("falafel_btn"),
+  shawarmaBtn = document.getElementById("shawarma_btn"),
+  broastedBtn = document.getElementById("broasted_btn"),
+  burgerBtn = document.getElementById("burger_btn"),
+  apptizersBtn = document.getElementById("apptizers_btn"),
+  shawarmaCtg = document.getElementById("shawarma_cth"),
+  broastedCtg = document.getElementById("broasted_ctg"),
+  burgerCtg = document.getElementById("burger_ctg"),
+  falafelCtg = document.getElementById("falafel_ctg"),
+  apptizersCtg = document.getElementById("apptizers_ctg"),
+  mainBtn = document.getElementById("main-btn"),
+  navigationBar = document.querySelector(".navigation-bar");
 let burger = document.getElementById("burger"),
   nav = document.getElementById("main-nav");
+/* 
+var userScroll = false;
 
-burger.addEventListener("click", function (e) {
-  this.classList.toggle("is-open");
+function mouseEvent(e) {
+  userScroll = true;
+}
+
+document.addEventListener("keydown", function (e) {
+  if (
+    e.key == 33 || // page up
+    e.key == 34 || // page dn
+    e.key == 32 || // spacebar
+    e.key == 38 || // up
+    e.key == 40 || // down
+    (e.ctrlKey && e.key == 36) || // ctrl + home
+    (e.ctrlKey && e.key == 35) // ctrl + end
+  ) {
+    userScroll = true;
+  }
+});
+
+// detect user scroll through mouse
+// Mozilla/Webkit
+if (window.addEventListener) {
+  document.addEventListener("DOMMouseScroll", mouseEvent, false);
+}
+
+//for IE/OPERA etc
+document.onmousewheel = mouseEvent;
+
+// to reset flag when named anchors are clicked
+$("a[href*=#]").click(function () {
+  userScroll = false;
+});
+
+// detect browser/user scroll
+document.addEventListener("scroll", () => {
+  console.log(
+    "Scroll initiated by " + (userScroll == true ? "user" : "browser")
+  );
+});
+
+
+ */
+
+// gets the coordination of a given element relatively to the whole document
+function getOffset(el) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left + window.scrollX,
+    top: rect.top + window.scrollY,
+  };
+}
+
+// responsible of opening and closing the main nav
+function toggleMainNav() {
+  if (!nav.classList.contains("is-open")) header.scrollIntoView();
+  burger.classList.toggle("is-open");
   nav.classList.toggle("is-open");
   document.body.classList.toggle("lock");
+}
+
+// controls navigation of the main nav
+function navsRespond(domElement) {
+  toggleMainNav();
+  domElement.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+// controls navigation of the side nav
+function sideNavRespond(translate, height, domElement) {
+  container.style.transform = `translateY(${translate}rem)`;
+  rectangle.style.height = `${height}vh`;
+  domElement.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function toggleCtg() {
+  ourSideBar.classList.toggle("hide");
+  ourSideBar.classList.toggle("show");
+  console.log("functon");
+}
+
+
+menu.addEventListener("click", () => sideNavRespond(-4.5, 72, theMenu));
+home.addEventListener("click", () => sideNavRespond(0, 85, header));
+contact.addEventListener("click", () => sideNavRespond(-9, 63, footer));
+about.addEventListener("click", () => sideNavRespond(-14, 54, aboutScetion));
+sideBtn.addEventListener("click", toggleCtg);
+closeBtn.addEventListener("click", toggleCtg);
+homeNav.addEventListener("click", () => navsRespond(header));
+menuNav.addEventListener("click", () => navsRespond(theMenu));
+aboutNav.addEventListener("click", () => navsRespond(aboutScetion));
+contactNav.addEventListener("click", () => navsRespond(footer));
+burger.addEventListener("click", toggleMainNav);
+
+// responding to scroll
+
+document.addEventListener("scroll", () => {
+  if (
+    window.scrollY >= getOffset(theMenu).top &&
+    window.scrollY < getOffset(aboutScetion).top &&
+    window.scrollY < getOffset(footer).top
+  ) {
+    container.style.transform = "translateY(-4.5rem)";
+    rectangle.style.height = "72vh";
+  } else if (
+    window.scrollY >= getOffset(aboutScetion).top &&
+    window.scrollY < getOffset(footer).top - 750
+  ) {
+    container.style.transform = "translateY(-14rem)";
+    rectangle.style.height = "54vh";
+  } else if (window.scrollY > getOffset(footer).top - 750) {
+    container.style.transform = "translateY(-9rem)";
+    rectangle.style.height = "63vh";
+  } else {
+    container.style.transform = "translateY(0)";
+    rectangle.style.height = "85vh";
+  }
 });
 
-//---------------------------- THE DESCKTOP SLIDER --------------------------//
-
-$(document).ready(function () {
-  var $slider = $(".slider"),
-    $slideBGs = $(".slide__bg"),
-    diff = 0,
-    curSlide = 0,
-    numOfSlides = $(".slide").length - 1,
-    animating = false,
-    animTime = 500,
-    autoSlideTimeout,
-    autoSlideDelay = 6000,
-    $pagination = $(".slider-pagi");
-
-  function createBullets() {
-    for (var i = 0; i < numOfSlides + 1; i++) {
-      var $li = $("<li class='slider-pagi__elem'></li>");
-      $li.addClass("slider-pagi__elem-" + i).data("page", i);
-      if (!i) $li.addClass("active");
-      $pagination.append($li);
-    }
-  }
-
-  createBullets();
-
-  function manageControls() {
-    $(".slider-control").removeClass("inactive");
-    if (!curSlide) $(".slider-control.left").addClass("inactive");
-    if (curSlide === numOfSlides)
-      $(".slider-control.right").addClass("inactive");
-  }
-
-  function autoSlide() {
-    autoSlideTimeout = setTimeout(function () {
-      curSlide++;
-      if (curSlide > numOfSlides) curSlide = 0;
-      changeSlides();
-    }, autoSlideDelay);
-  }
-
-  autoSlide();
-
-  function changeSlides(instant) {
-    if (!instant) {
-      animating = true;
-      manageControls();
-      $slider.addClass("animating");
-      $slider.css("top");
-      $(".slide").removeClass("active");
-      $(".slide-" + curSlide).addClass("active");
-      setTimeout(function () {
-        $slider.removeClass("animating");
-        animating = false;
-      }, animTime);
-    }
-    window.clearTimeout(autoSlideTimeout);
-    $(".slider-pagi__elem").removeClass("active");
-    $(".slider-pagi__elem-" + curSlide).addClass("active");
-    $slider.css("transform", "translate3d(" + -curSlide * 100 + "%,0,0)");
-    $slideBGs.css("transform", "translate3d(" + curSlide * 50 + "%,0,0)");
-    diff = 0;
-    autoSlide();
-  }
-
-  function navigateLeft() {
-    if (animating) return;
-    if (curSlide > 0) curSlide--;
-    changeSlides();
-  }
-
-  function navigateRight() {
-    if (animating) return;
-    if (curSlide < numOfSlides) curSlide++;
-    changeSlides();
-  }
-
-  $(document).on("mousedown touchstart", ".slider", function (e) {
-    if (animating) return;
-    window.clearTimeout(autoSlideTimeout);
-    var startX = e.pageX || e.originalEvent.touches[0].pageX,
-      winW = $(window).width();
-    diff = 0;
-
-    $(document).on("mousemove touchmove", function (e) {
-      var x = e.pageX || e.originalEvent.touches[0].pageX;
-      diff = ((startX - x) / winW) * 70;
-      if ((!curSlide && diff < 0) || (curSlide === numOfSlides && diff > 0))
-        diff /= 2;
-      $slider.css(
-        "transform",
-        "translate3d(" + (-curSlide * 100 - diff) + "%,0,0)"
-      );
-      $slideBGs.css(
-        "transform",
-        "translate3d(" + (curSlide * 50 + diff / 2) + "%,0,0)"
-      );
-    });
-  });
-
-  $(document).on("mouseup touchend", function (e) {
-    $(document).off("mousemove touchmove");
-    if (animating) return;
-    if (!diff) {
-      changeSlides(true);
-      return;
-    }
-    if (diff > -8 && diff < 8) {
-      changeSlides();
-      return;
-    }
-    if (diff <= -8) {
-      navigateLeft();
-    }
-    if (diff >= 8) {
-      navigateRight();
-    }
-  });
-
-  $(document).on("click", ".slider-control", function () {
-    if ($(this).hasClass("left")) {
-      navigateLeft();
-    } else {
-      navigateRight();
-    }
-  });
-
-  $(document).on("click", ".slider-pagi__elem", function () {
-    curSlide = $(this).data("page");
-    changeSlides();
-  });
-});
-
+// mainBtn.addEventListener("click", function (params) {
+//   console.log("clikced");
+//   theMenu.scrollIntoView({ behavior: "smooth", block: "start" });
+// });
 //---------------------------- THE MENU --------------------------//
-
-let meals = [
+/* 
+  let meals = [
   [
     {
       img: "assets/images/1.webp",
@@ -244,21 +185,21 @@ let meals = [
       price: "200",
       desc: "Арабский хлеб, куриное филе,красный болгарский перец,зеленый лук, кукуруза,приправа, майонез,грибы, картофель",
     },
-
+    
     {
       img: "assets/images/5.webp",
       lbl: "Шаурма панне",
       price: "350",
       desc: "Шаурма с курицей впанировке, чесночныйсоус, картофель фрикетчуп",
     },
-
+    
     {
       img: "assets/images/6.webp",
       lbl: "Цезарь ролл",
       price: "200",
       desc: "Стрипсы, майонез, помидор,сыр, солёный огурец,салат с зеленью",
     },
-
+    
     {
       img: "assets/images/7.webp",
       lbl: "Шаурма гиро",
@@ -410,19 +351,19 @@ let meals = [
   ],
   [
     {
-      img: "assets/images/food_1600х1200.jpg",
+      img: "assets/images/25.webp",
       lbl: "Фри",
       price: "60",
       desc: "",
     },
     {
-      img: "assets/images/food_1600х1200.jpg",
+      img: "assets/images/25.webp",
       lbl: "Фри",
       price: "100",
       desc: "",
     },
     {
-      img: "assets/images/food_1600х1200.jpg",
+      img: "assets/images/26.webp",
       lbl: "Фри (большая)",
       price: "200",
       desc: "",
@@ -491,10 +432,11 @@ let meals = [
 ];
 
 let html = "",
-  title = "";
+title = "",
+id = "";
 for (let i = 0, l = meals.length; l > i; i++) {
   html += '<div class="firstContainer">';
-
+  
   switch (i) {
     case 0:
       title = "Шаурма";
@@ -502,35 +444,62 @@ for (let i = 0, l = meals.length; l > i; i++) {
     case 1:
       title = "Хрустящие";
       break;
-    case 2:
-      title = "Бургеры";
-      break;
-    case 3:
-      title = "Вегетерианское";
-      break;
-    case 4:
-      title = "Фалафель";
-      break;
-    case 5:
-      title = "Шашлык";
-      break;
-    case 6:
-      title = "Закуски";
-      break;
-  }
+      case 2:
+        title = "Бургеры";
+        id = "broasted";
+        break;
+        case 3:
+          title = "Вегетерианское";
+          break;
+          case 4:
+            title = "Фалафель";
+            break;
+            case 5:
+              title = "Шашлык";
+              break;
+              case 6:
+                title = "Закуски";
+                break;
+              }
+              
+              html += `<p class="firstContainer__title" id="${id}">${title}</p>`;
+              for (let j = 0, s = meals[i].length; s > j; j++) {
+                html += '<div class="mealItem">';
+                html += `<p class="mealItem__price">${meals[i][j].price} ₽</p>`;
+                html += ' <figure class="mealItem__main">';
+                html += ` <img src="${meals[i][j].img}" alt="meal Image" class="mealItem__main__img"/>`;
+                html += ` <figcaption class="mealItem__main__caption">${meals[i][j].desc}</figcaption>`;
+                html += " </figure>";
+                html += `  <p class="mealItem__title">${meals[i][j].lbl}</p>`;
+                html += " </div>";
+              }
+              html += "</div>";
+            }
+            */
 
-  html += `<p class="firstContainer__title">${title}</p>`;
-  for (let j = 0, s = meals[i].length; s > j; j++) {
-    html += '<div class="mealItem">';
-    html += `<p class="mealItem__price">${meals[i][j].price} ₽</p>`;
-    html += ' <figure class="mealItem__main">';
-    html += ` <img src="${meals[i][j].img}" alt="meal Image" class="mealItem__main__img"/>`;
-    html += ` <figcaption class="mealItem__main__caption">${meals[i][j].desc}</figcaption>`;
-    html += " </figure>";
-    html += `  <p class="mealItem__title">${meals[i][j].lbl}</p>`;
-    html += " </div>";
-  }
-  html += "</div>";
-}
-
-document.getElementById("TheMenu").innerHTML = html;
+/* falafelBtn.addEventListener("click", function (params) {
+  ourSideBar.classList.remove("show");
+  ourSideBar.classList.add("hide");
+  falafelCtg.scrollIntoView({ behavior: "smooth", block: "start" });
+  console.log("clicked");
+});
+shawarmaBtn.addEventListener("click", function name(params) {
+  ourSideBar.classList.remove("show");
+  ourSideBar.classList.add("hide");
+  shawarmaCtg.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+broastedBtn.addEventListener("click", function name(params) {
+  ourSideBar.classList.remove("show");
+  ourSideBar.classList.add("hide");
+  broastedCtg.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+burgerBtn.addEventListener("click", function name(params) {
+  ourSideBar.classList.remove("show");
+  ourSideBar.classList.add("hide");
+  burgerCtg.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+apptizersBtn.addEventListener("click", function name(params) {
+  ourSideBar.classList.remove("show");
+  ourSideBar.classList.add("hide");
+  apptizersCtg.scrollIntoView({ behavior: "smooth", block: "start" });
+}); */
