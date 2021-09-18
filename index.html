@@ -109,7 +109,7 @@
         </ul>
       </div>
       <div class="side-bar hide" id="sideBar">
-        <button class="close">&#9747;</button>
+        <button class="close" id="close-btn">&#9747;</button>
         <div class="side-bar__elem" id="falafel_btn">
           <p class="side-bar__elem__title">Falafel</p>
           <img src="assets/images/falafel_ctg.jpg" alt="" />
@@ -141,15 +141,12 @@
         </div>
       </div>
       <button class="side-btn">Menu</button>
-      <!-- <div class="logo-container">
-        <img src="assets/SVGs/bottom_logo.svg" alt="" />
-      </div> -->
     </header>
     <main>
       <section class="menu" id="TheMenu">
-        <div class="firstContainer" id="shawarma_ctg">
-          <p class="firstContainer__title" id="">Шаурма</p>
-          <div class="mealItem">
+        <div class="firstContainer">
+          <p class="firstContainer__title">Шаурма</p>
+          <div class="mealItem" id="00">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -164,7 +161,7 @@
             </figure>
             <p class="mealItem__title">Шаурма от шеф повара</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="01">
             <p class="mealItem__price">160 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -179,7 +176,7 @@
             </figure>
             <p class="mealItem__title">Шаурма</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="02">
             <p class="mealItem__price">300 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -194,7 +191,7 @@
             </figure>
             <p class="mealItem__title">Шаурма от шефа /большая/</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="03">
             <p class="mealItem__price">250 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -209,7 +206,7 @@
             </figure>
             <p class="mealItem__title">Шаурма по Арабски</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="04">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -224,7 +221,7 @@
             </figure>
             <p class="mealItem__title">Мексикану</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="05">
             <p class="mealItem__price">350 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -238,7 +235,7 @@
             </figure>
             <p class="mealItem__title">Шаурма панне</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="06">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -252,7 +249,7 @@
             </figure>
             <p class="mealItem__title">Цезарь ролл</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="07">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -268,9 +265,9 @@
             <p class="mealItem__title">Шаурма гиро</p>
           </div>
         </div>
-        <div class="firstContainer" id="broasted_ctg">
+        <div class="firstContainer">
           <p class="firstContainer__title" id="">Хрустящие</p>
-          <div class="mealItem">
+          <div class="mealItem" id="10">
             <p class="mealItem__price">250 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -282,7 +279,7 @@
             </figure>
             <p class="mealItem__title">Крылышки 8шт</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="11">
             <p class="mealItem__price">470 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -294,7 +291,7 @@
             </figure>
             <p class="mealItem__title">Крылышки 16шт</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="12">
             <p class="mealItem__price">350 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -308,7 +305,7 @@
             </figure>
             <p class="mealItem__title">Комбо 8шт</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="13">
             <p class="mealItem__price">680 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -323,9 +320,9 @@
             <p class="mealItem__title">Комбо 16шт</p>
           </div>
         </div>
-        <div class="firstContainer" id="burger_ctg">
+        <div class="firstContainer">
           <p class="firstContainer__title" id="broasted">Бургеры</p>
-          <div class="mealItem">
+          <div class="mealItem" id="20">
             <p class="mealItem__price">240 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -339,7 +336,7 @@
             </figure>
             <p class="mealItem__title">Бургер от шеф-повара</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="21">
             <p class="mealItem__price">240 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -353,7 +350,7 @@
             </figure>
             <p class="mealItem__title">Бургер от шеф-повара</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="22">
             <p class="mealItem__price">380 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -367,7 +364,7 @@
             </figure>
             <p class="mealItem__title">Комбо от шеф-повара баранина</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="23">
             <p class="mealItem__price">380 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -382,7 +379,7 @@
         </div>
         <div class="firstContainer">
           <p class="firstContainer__title" id="broasted">Вегетерианское</p>
-          <div class="mealItem">
+          <div class="mealItem" id="30">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -396,7 +393,7 @@
             </figure>
             <p class="mealItem__title">Бургер Фалафель</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="31">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -408,7 +405,7 @@
             </figure>
             <p class="mealItem__title">Сэндвич салатом с сыром</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="32">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -421,9 +418,9 @@
             <p class="mealItem__title">Сэндвич с картошкой</p>
           </div>
         </div>
-        <div class="firstContainer" id="falafel_ctg">
+        <div class="firstContainer">
           <p class="firstContainer__title" id="broasted">Фалафель</p>
-          <div class="mealItem">
+          <div class="mealItem" id="40">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -438,7 +435,7 @@
             </figure>
             <p class="mealItem__title">Фалафель</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="41">
             <p class="mealItem__price">250 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -453,7 +450,7 @@
             </figure>
             <p class="mealItem__title">Фалафель по Арабски</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="42">
             <p class="mealItem__price">240 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -468,7 +465,7 @@
             </figure>
             <p class="mealItem__title">Уджа с мясом</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="43">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -482,7 +479,7 @@
             </figure>
             <p class="mealItem__title">Уджа</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="44">
             <p class="mealItem__price">150 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -497,9 +494,9 @@
             <p class="mealItem__title">Фалафель штучный</p>
           </div>
         </div>
-        <div class="firstContainer" id="barbique_ctg">
+        <div class="firstContainer">
           <p class="firstContainer__title" id="broasted">Шашлык</p>
-          <div class="mealItem">
+          <div class="mealItem" id="50">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -513,7 +510,7 @@
             </figure>
             <p class="mealItem__title">Люля кебаб</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="51">
             <p class="mealItem__price">160 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -525,7 +522,7 @@
             </figure>
             <p class="mealItem__title">Люля кебаб</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="52">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -537,7 +534,7 @@
             </figure>
             <p class="mealItem__title">Шашлык (баранина)</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="53">
             <p class="mealItem__price">160 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -551,7 +548,7 @@
             </figure>
             <p class="mealItem__title">Шиш тауук</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="54">
             <p class="mealItem__price">900 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -565,7 +562,7 @@
             </figure>
             <p class="mealItem__title">Шашлык в</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="55">
             <p class="mealItem__price">1750 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -580,9 +577,9 @@
             <p class="mealItem__title">Шашлык в</p>
           </div>
         </div>
-        <div class="firstContainer" id="apptizers_ctg">
+        <div class="firstContainer">
           <p class="firstContainer__title" id="broasted">Закуски</p>
-          <div class="mealItem">
+          <div class="mealItem" id="60">
             <p class="mealItem__price">60 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -594,7 +591,7 @@
             </figure>
             <p class="mealItem__title">Фри</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="61">
             <p class="mealItem__price">100 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -606,7 +603,7 @@
             </figure>
             <p class="mealItem__title">Фри</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="62">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -618,7 +615,7 @@
             </figure>
             <p class="mealItem__title">Фри (большая)</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="63">
             <p class="mealItem__price">160 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -632,7 +629,7 @@
             </figure>
             <p class="mealItem__title">АРАЕС с мясом</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="64">
             <p class="mealItem__price">140 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -646,7 +643,7 @@
             </figure>
             <p class="mealItem__title">Араес Сыр (веган)</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="65">
             <p class="mealItem__price">180 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -660,7 +657,7 @@
             </figure>
             <p class="mealItem__title">АРАЕС мясом с сыром</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="66">
             <p class="mealItem__price">180 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -675,7 +672,7 @@
             </figure>
             <p class="mealItem__title">Суджук</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="67">
             <p class="mealItem__price">180 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -689,7 +686,7 @@
             </figure>
             <p class="mealItem__title">АРАЕС сыр</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="68">
             <p class="mealItem__price">140 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -701,7 +698,7 @@
             </figure>
             <p class="mealItem__title">АРАЕС аджика</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="69">
             <p class="mealItem__price">150 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -713,7 +710,7 @@
             </figure>
             <p class="mealItem__title">Хумус (сезонный)</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="610">
             <p class="mealItem__price">150 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -725,7 +722,7 @@
             </figure>
             <p class="mealItem__title">Мтапал (сезонный)</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="611">
             <p class="mealItem__price">150 ₽</p>
             <figure class="mealItem__main">
               <img
@@ -737,12 +734,13 @@
             </figure>
             <p class="mealItem__title">Табуле</p>
           </div>
-          <div class="mealItem">
+          <div class="mealItem" id="612">
             <p class="mealItem__price">150 ₽</p>
             <figure class="mealItem__main">
               <img
                 src="assets/images/35.webp"
                 alt="meal Image"
+                onContextMenu="return false;"
                 class="mealItem__main__img"
               />
               <figcaption class="mealItem__main__caption"></figcaption>
@@ -892,13 +890,25 @@
             >
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
-            <a class="footer__nav__element" target="_blank">
+            <a
+              class="footer__nav__element"
+              href="https://m.youtube.com/channel/UCIXOCJI-EmHTxkJQ2wlCmfQ/featured"
+              target="_blank"
+            >
               <ion-icon name="logo-youtube"></ion-icon>
             </a>
-            <a class="footer__nav__element" target="_blank">
+            <a
+              class="footer__nav__element"
+              href="https://www.instagram.com/falafeloo.ru/"
+              target="_blank"
+            >
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
-            <a class="footer__nav__element" target="_blank">
+            <a
+              class="footer__nav__element"
+              href="https://www.tiktok.com/@falafiloo.ru"
+              target="_blank"
+            >
               <ion-icon name="logo-tiktok"></ion-icon>
             </a>
           </div>
@@ -909,7 +919,7 @@
               width="250"
               height="200"
               id="gmap_canvas"
-              src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Proyezd%20Ugreshskiy,%202,%20Kotelniki,%20Moskovskaya%20oblast',%20Russia,%20140091&t=&z=17&ie=UTF8&iwloc=&output=embed"
               frameborder=""
               scrolling="no"
               marginheight="0"
@@ -923,6 +933,25 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal__content">
+        <span class="close-button">&times;</span>
+        <div class="modal__mealImage">
+          <img src="assets/images/33.webp" alt="" />
+        </div>
+        <div class="modal__txt">
+          <p class="modal__txt-title">АРАЕС сыр</p>
+          <p class="modal__txt-description">
+            Мясо баранины со специальной приправой, чеснок, помидор, огурец
+            соленый.
+          </p>
+          <div class="modal__order">
+            <button class="menu-btn modal__order-btn">Закажите еду</button>
+            <button class="menu-btn modal__order-btn">Закажите еду</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <img src="assets/SVGs/bottom_logo.svg" alt="" class="bottom-logo" />
     <script
       type="module"
@@ -931,12 +960,6 @@
     <script
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     ></script>
     <script src="JS/main.js"></script>
   </body>

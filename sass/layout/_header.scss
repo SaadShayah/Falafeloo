@@ -10,10 +10,14 @@ header {
     height: 75%;
     background-color: black;
     overflow: visible;
+
+    @media only screen and(max-width:600px) {
+      height: 85%;
+    }
   }
 
   &__sub {
-    background-color: $red-dark1;
+    background-color: $red-dark2;
     height: 25%;
     position: relative;
 
@@ -26,6 +30,9 @@ header {
       width: 100%;
       background-color: #fff;
     }
+    @media only screen and(max-width:600px) {
+      height: 15%;
+    }
   }
 }
 
@@ -35,7 +42,18 @@ header {
   display: flex;
 
   &-text {
-    padding: 13rem 2rem;
+    padding: 10rem 7rem 0 2rem;
+    width: 65%;
+
+    @media only screen and(max-width:1000px) {
+      width: 100%;
+    }
+    @media only screen and(max-width:600px) {
+      padding: 6rem 2rem;
+    }
+    @media only screen and(max-width:300px) {
+      padding: 3rem 0.5rem;
+    }
   }
 
   &__bg {
@@ -50,11 +68,15 @@ header {
 
   &__img {
     position: relative;
-    height: 60%;
+    width: 35%;
     z-index: 9;
+    @media only screen and(max-width:1000px) {
+      display: none;
+    }
 
     img {
-      height: 50%;
+      height: 80%;
+      margin-left: -10rem;
     }
   }
 }
@@ -74,6 +96,12 @@ header {
   padding: 0.6rem 1rem;
   font-family: $font-russo;
   letter-spacing: 0.1rem;
+  cursor: pointer;
+
+  @media only screen and(max-width:300px) {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+  }
 }
 
 .side-btn {
@@ -87,9 +115,11 @@ header {
   padding-right: 1rem;
   font-family: $font-russo;
   border-radius: 100px 100px 0 0;
-  background-color: $red;
+  background-color: $red-dark1;
   color: white;
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
   margin-left: -1.9rem;
+  border: 1px solid rgba(224, 214, 214, 0.682);
+  cursor: pointer;
 }

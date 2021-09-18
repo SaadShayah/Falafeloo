@@ -5,7 +5,10 @@ const home = document.getElementById("home"),
   rectangle = document.querySelector(".rectangle"),
   sideBtn = document.querySelector(".side-btn"),
   header = document.querySelector(".header"),
-  closeBtn = document.querySelector(".close"),
+  modalDescription = document.querySelector(".modal__txt-description"),
+  modalTitle = document.querySelector(".modal__txt-title"),
+  modalImage = document.querySelector(".modal__mealImage"),
+  closeBtn = document.getElementById("close-btn"),
   aboutScetion = document.getElementById("aboutSection"),
   footer = document.querySelector(".footer-container"),
   theMenu = document.getElementById("TheMenu"),
@@ -19,13 +22,16 @@ const home = document.getElementById("home"),
   broastedBtn = document.getElementById("broasted_btn"),
   burgerBtn = document.getElementById("burger_btn"),
   apptizersBtn = document.getElementById("apptizers_btn"),
-  shawarmaCtg = document.getElementById("shawarma_cth"),
+  shawarmaCtg = document.getElementById("shawarma_ctg"),
   broastedCtg = document.getElementById("broasted_ctg"),
   burgerCtg = document.getElementById("burger_ctg"),
   falafelCtg = document.getElementById("falafel_ctg"),
   apptizersCtg = document.getElementById("apptizers_ctg"),
   mainBtn = document.getElementById("main-btn"),
-  navigationBar = document.querySelector(".navigation-bar");
+  navigationBar = document.querySelector(".navigation-bar"),
+  mealElement = document.querySelectorAll(".mealItem");
+const modal = document.querySelector(".modal");
+const closeButton = document.querySelector(".close-button");
 let burger = document.getElementById("burger"),
   nav = document.getElementById("main-nav");
 /* 
@@ -109,7 +115,28 @@ function toggleCtg() {
   console.log("functon");
 }
 
+function toggleModal(id) {
+  if (!modal.classList.contains("show-modal")) {
+    let index1 = Number(String(id).charAt(0));
+    let index2 = Number(String(id).slice(1));
 
+    modalTitle.textContent = meals[index1][index2].lbl;
+    modalDescription.textContent = meals[index1][index2].desc;
+    modalImage.innerHTML = `<img src="${meals[index1][index2].img}" alt="" />`;
+  }
+  console.log("toggle called");
+  modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+  if (event.target === modal) {
+    toggleModal();
+  }
+}
+
+mainBtn.addEventListener("click", function (params) {
+  theMenu.scrollIntoView({ behavior: "smooth", block: "start" });
+});
 menu.addEventListener("click", () => sideNavRespond(-4.5, 72, theMenu));
 home.addEventListener("click", () => sideNavRespond(0, 85, header));
 contact.addEventListener("click", () => sideNavRespond(-9, 63, footer));
@@ -121,10 +148,17 @@ menuNav.addEventListener("click", () => navsRespond(theMenu));
 aboutNav.addEventListener("click", () => navsRespond(aboutScetion));
 contactNav.addEventListener("click", () => navsRespond(footer));
 burger.addEventListener("click", toggleMainNav);
+mealElement.forEach((item) => {
+  item.addEventListener("click", (event) =>
+    toggleModal(event.currentTarget.id)
+  );
+});
+closeButton.addEventListener("click", () => toggleModal("ziltch"));
+window.addEventListener("click", windowOnClick);
 
-// responding to scroll
+// main nav responding to scroll
 
-document.addEventListener("scroll", () => {
+document.addEventListener("scroll", (event) => {
   if (
     window.scrollY >= getOffset(theMenu).top &&
     window.scrollY < getOffset(aboutScetion).top &&
@@ -147,13 +181,9 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// mainBtn.addEventListener("click", function (params) {
-//   console.log("clikced");
-//   theMenu.scrollIntoView({ behavior: "smooth", block: "start" });
-// });
 //---------------------------- THE MENU --------------------------//
-/* 
-  let meals = [
+
+let meals = [
   [
     {
       img: "assets/images/1.webp",
@@ -185,21 +215,21 @@ document.addEventListener("scroll", () => {
       price: "200",
       desc: "Арабский хлеб, куриное филе,красный болгарский перец,зеленый лук, кукуруза,приправа, майонез,грибы, картофель",
     },
-    
+
     {
       img: "assets/images/5.webp",
       lbl: "Шаурма панне",
       price: "350",
       desc: "Шаурма с курицей впанировке, чесночныйсоус, картофель фрикетчуп",
     },
-    
+
     {
       img: "assets/images/6.webp",
       lbl: "Цезарь ролл",
       price: "200",
       desc: "Стрипсы, майонез, помидор,сыр, солёный огурец,салат с зеленью",
     },
-    
+
     {
       img: "assets/images/7.webp",
       lbl: "Шаурма гиро",
@@ -430,13 +460,13 @@ document.addEventListener("scroll", () => {
     },
   ],
 ];
-
+/* 
 let html = "",
-title = "",
-id = "";
+  title = "",
+  id = "";
 for (let i = 0, l = meals.length; l > i; i++) {
   html += '<div class="firstContainer">';
-  
+
   switch (i) {
     case 0:
       title = "Шаурма";
@@ -444,62 +474,36 @@ for (let i = 0, l = meals.length; l > i; i++) {
     case 1:
       title = "Хрустящие";
       break;
-      case 2:
-        title = "Бургеры";
-        id = "broasted";
-        break;
-        case 3:
-          title = "Вегетерианское";
-          break;
-          case 4:
-            title = "Фалафель";
-            break;
-            case 5:
-              title = "Шашлык";
-              break;
-              case 6:
-                title = "Закуски";
-                break;
-              }
-              
-              html += `<p class="firstContainer__title" id="${id}">${title}</p>`;
-              for (let j = 0, s = meals[i].length; s > j; j++) {
-                html += '<div class="mealItem">';
-                html += `<p class="mealItem__price">${meals[i][j].price} ₽</p>`;
-                html += ' <figure class="mealItem__main">';
-                html += ` <img src="${meals[i][j].img}" alt="meal Image" class="mealItem__main__img"/>`;
-                html += ` <figcaption class="mealItem__main__caption">${meals[i][j].desc}</figcaption>`;
-                html += " </figure>";
-                html += `  <p class="mealItem__title">${meals[i][j].lbl}</p>`;
-                html += " </div>";
-              }
-              html += "</div>";
-            }
-            */
+    case 2:
+      title = "Бургеры";
+      id = "broasted";
+      break;
+    case 3:
+      title = "Вегетерианское";
+      break;
+    case 4:
+      title = "Фалафель";
+      break;
+    case 5:
+      title = "Шашлык";
+      break;
+    case 6:
+      title = "Закуски";
+      break;
+  }
 
-/* falafelBtn.addEventListener("click", function (params) {
-  ourSideBar.classList.remove("show");
-  ourSideBar.classList.add("hide");
-  falafelCtg.scrollIntoView({ behavior: "smooth", block: "start" });
-  console.log("clicked");
-});
-shawarmaBtn.addEventListener("click", function name(params) {
-  ourSideBar.classList.remove("show");
-  ourSideBar.classList.add("hide");
-  shawarmaCtg.scrollIntoView({ behavior: "smooth", block: "start" });
-});
-broastedBtn.addEventListener("click", function name(params) {
-  ourSideBar.classList.remove("show");
-  ourSideBar.classList.add("hide");
-  broastedCtg.scrollIntoView({ behavior: "smooth", block: "start" });
-});
-burgerBtn.addEventListener("click", function name(params) {
-  ourSideBar.classList.remove("show");
-  ourSideBar.classList.add("hide");
-  burgerCtg.scrollIntoView({ behavior: "smooth", block: "start" });
-});
-apptizersBtn.addEventListener("click", function name(params) {
-  ourSideBar.classList.remove("show");
-  ourSideBar.classList.add("hide");
-  apptizersCtg.scrollIntoView({ behavior: "smooth", block: "start" });
-}); */
+  html += `<p class="firstContainer__title" id="${id}">${title}</p>`;
+  for (let j = 0, s = meals[i].length; s > j; j++) {
+    html += `<div class="mealItem" id="${i}${j}">`;
+    html += `<p class="mealItem__price">${meals[i][j].price} ₽</p>`;
+    html += ' <figure class="mealItem__main">';
+    html += ` <img src="${meals[i][j].img}" alt="meal Image" onContextMenu="return false;" class="mealItem__main__img"/>`;
+    html += ` <figcaption class="mealItem__main__caption">${meals[i][j].desc}</figcaption>`;
+    html += " </figure>";
+    html += `  <p class="mealItem__title">${meals[i][j].lbl}</p>`;
+    html += " </div>";
+  }
+  html += "</div>";
+} */
+
+// console.log(html);

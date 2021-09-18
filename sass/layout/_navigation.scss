@@ -60,6 +60,9 @@
   @media only screen and(min-height:845px) {
     margin-top: 52vh;
   }
+  @media only screen and(min-height:860px) {
+    display: none;
+  }
 }
 
 .rectangle {
@@ -81,6 +84,7 @@
   right: 0;
   top: 80.5vh;
   transition: all 0.3s;
+  box-shadow: 2px 2px 5px $grey-dark;
 }
 
 /* Main menu positionning */

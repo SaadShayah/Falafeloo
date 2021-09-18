@@ -20,6 +20,12 @@
     rgba(252, 12, 12, 0.5) 46.28%,
     rgba(84, 12, 12, 0.7) 84.82%
   );
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
 
   &__elem {
     height: 10rem;
@@ -127,10 +133,12 @@
 
 .close {
   position: absolute;
-  top: 0.1rem;
-  right: 0.5rem;
+  top: 0.2rem;
+  right: 1rem;
   background-color: transparent;
   color: white;
   font-size: 2rem;
   border: 0;
+  height: 1rem;
+  width: 2rem;
 }
