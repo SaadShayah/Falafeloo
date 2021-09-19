@@ -1,9 +1,4 @@
-const home = document.getElementById("home"),
-  contact = document.getElementById("contact"),
-  about = document.getElementById("about"),
-  container = document.querySelector(".container"),
-  rectangle = document.querySelector(".rectangle"),
-  sideBtn = document.querySelector(".side-btn"),
+const sideBtn = document.querySelector(".side-btn"),
   header = document.querySelector(".header"),
   modalDescription = document.querySelector(".modal__txt-description"),
   modalTitle = document.querySelector(".modal__txt-title"),
@@ -16,77 +11,13 @@ const home = document.getElementById("home"),
   homeNav = document.getElementById("homeNav"),
   menuNav = document.getElementById("menuNav"),
   aboutNav = document.getElementById("aboutNav"),
-  contactNav = document.getElementById("contactNav"),
-  falafelBtn = document.getElementById("falafel_btn"),
-  shawarmaBtn = document.getElementById("shawarma_btn"),
-  broastedBtn = document.getElementById("broasted_btn"),
-  burgerBtn = document.getElementById("burger_btn"),
-  apptizersBtn = document.getElementById("apptizers_btn"),
-  shawarmaCtg = document.getElementById("shawarma_ctg"),
-  broastedCtg = document.getElementById("broasted_ctg"),
-  burgerCtg = document.getElementById("burger_ctg"),
-  falafelCtg = document.getElementById("falafel_ctg"),
-  apptizersCtg = document.getElementById("apptizers_ctg"),
   mainBtn = document.getElementById("main-btn"),
   navigationBar = document.querySelector(".navigation-bar"),
-  mealElement = document.querySelectorAll(".mealItem");
-const modal = document.querySelector(".modal");
-const closeButton = document.querySelector(".close-button");
-let burger = document.getElementById("burger"),
+  mealElement = document.querySelectorAll(".mealItem"),
+  modal = document.querySelector(".modal"),
+  closeButton = document.querySelector(".close-button"),
+  burger = document.getElementById("burger"),
   nav = document.getElementById("main-nav");
-/* 
-var userScroll = false;
-
-function mouseEvent(e) {
-  userScroll = true;
-}
-
-document.addEventListener("keydown", function (e) {
-  if (
-    e.key == 33 || // page up
-    e.key == 34 || // page dn
-    e.key == 32 || // spacebar
-    e.key == 38 || // up
-    e.key == 40 || // down
-    (e.ctrlKey && e.key == 36) || // ctrl + home
-    (e.ctrlKey && e.key == 35) // ctrl + end
-  ) {
-    userScroll = true;
-  }
-});
-
-// detect user scroll through mouse
-// Mozilla/Webkit
-if (window.addEventListener) {
-  document.addEventListener("DOMMouseScroll", mouseEvent, false);
-}
-
-//for IE/OPERA etc
-document.onmousewheel = mouseEvent;
-
-// to reset flag when named anchors are clicked
-$("a[href*=#]").click(function () {
-  userScroll = false;
-});
-
-// detect browser/user scroll
-document.addEventListener("scroll", () => {
-  console.log(
-    "Scroll initiated by " + (userScroll == true ? "user" : "browser")
-  );
-});
-
-
- */
-
-// gets the coordination of a given element relatively to the whole document
-function getOffset(el) {
-  const rect = el.getBoundingClientRect();
-  return {
-    left: rect.left + window.scrollX,
-    top: rect.top + window.scrollY,
-  };
-}
 
 // responsible of opening and closing the main nav
 function toggleMainNav() {
@@ -99,13 +30,6 @@ function toggleMainNav() {
 // controls navigation of the main nav
 function navsRespond(domElement) {
   toggleMainNav();
-  domElement.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-
-// controls navigation of the side nav
-function sideNavRespond(translate, height, domElement) {
-  container.style.transform = `translateY(${translate}rem)`;
-  rectangle.style.height = `${height}vh`;
   domElement.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -137,10 +61,6 @@ function windowOnClick(event) {
 mainBtn.addEventListener("click", function (params) {
   theMenu.scrollIntoView({ behavior: "smooth", block: "start" });
 });
-menu.addEventListener("click", () => sideNavRespond(-4.5, 72, theMenu));
-home.addEventListener("click", () => sideNavRespond(0, 85, header));
-contact.addEventListener("click", () => sideNavRespond(-9, 63, footer));
-about.addEventListener("click", () => sideNavRespond(-14, 54, aboutScetion));
 sideBtn.addEventListener("click", toggleCtg);
 closeBtn.addEventListener("click", toggleCtg);
 homeNav.addEventListener("click", () => navsRespond(header));
@@ -155,31 +75,6 @@ mealElement.forEach((item) => {
 });
 closeButton.addEventListener("click", () => toggleModal("ziltch"));
 window.addEventListener("click", windowOnClick);
-
-// main nav responding to scroll
-
-document.addEventListener("scroll", (event) => {
-  if (
-    window.scrollY >= getOffset(theMenu).top &&
-    window.scrollY < getOffset(aboutScetion).top &&
-    window.scrollY < getOffset(footer).top
-  ) {
-    container.style.transform = "translateY(-4.5rem)";
-    rectangle.style.height = "72vh";
-  } else if (
-    window.scrollY >= getOffset(aboutScetion).top &&
-    window.scrollY < getOffset(footer).top - 750
-  ) {
-    container.style.transform = "translateY(-14rem)";
-    rectangle.style.height = "54vh";
-  } else if (window.scrollY > getOffset(footer).top - 750) {
-    container.style.transform = "translateY(-9rem)";
-    rectangle.style.height = "63vh";
-  } else {
-    container.style.transform = "translateY(0)";
-    rectangle.style.height = "85vh";
-  }
-});
 
 //---------------------------- THE MENU --------------------------//
 
@@ -504,6 +399,6 @@ for (let i = 0, l = meals.length; l > i; i++) {
     html += " </div>";
   }
   html += "</div>";
-} */
+}
 
-// console.log(html);
+console.log(html); */

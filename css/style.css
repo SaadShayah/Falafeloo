@@ -17,8 +17,7 @@ body {
   background-repeat: repeat;
   position: relative;
   background-attachment: fixed;
-  position: relative;
-  user-select: none; }
+  position: relative; }
   @media only screen and (min-width: 400px) {
     body {
       font-size: 62.5%; } }
@@ -359,85 +358,6 @@ header {
   border: 1px solid rgba(224, 214, 214, 0.682);
   cursor: pointer; }
 
-.navigation-bar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 99999;
-  display: none; }
-  @media screen and (min-width: 350px) and (max-width: 1000px) {
-    .navigation-bar {
-      display: inline-block; } }
-
-.navs {
-  list-style: none;
-  margin-top: 32vh;
-  margin-right: 1rem;
-  font-size: 1.2rem;
-  display: flex;
-  transform-origin: right;
-  transform: rotatez(-90deg); }
-  .navs__item {
-    padding: 1rem; }
-    .navs__item__radio {
-      display: none; }
-  @media only screen and (min-height: 515px) {
-    .navs {
-      margin-top: 35vh; } }
-  @media only screen and (min-height: 555px) {
-    .navs {
-      margin-top: 38vh; } }
-  @media only screen and (min-height: 580px) {
-    .navs {
-      margin-top: 39vh; } }
-  @media only screen and (min-height: 600px) {
-    .navs {
-      margin-top: 40vh; } }
-  @media only screen and (min-height: 620px) {
-    .navs {
-      margin-top: 42vh; } }
-  @media only screen and (min-height: 650px) {
-    .navs {
-      margin-top: 44vh; } }
-  @media only screen and (min-height: 680px) {
-    .navs {
-      margin-top: 46vh; } }
-  @media only screen and (min-height: 720px) {
-    .navs {
-      margin-top: 48vh; } }
-  @media only screen and (min-height: 775px) {
-    .navs {
-      margin-top: 50vh; } }
-  @media only screen and (min-height: 820px) {
-    .navs {
-      margin-top: 51vh; } }
-  @media only screen and (min-height: 845px) {
-    .navs {
-      margin-top: 52vh; } }
-  @media only screen and (min-height: 860px) {
-    .navs {
-      display: none; } }
-
-.rectangle {
-  height: 83vh;
-  width: 4px;
-  background-color: #b00;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: all 0.3s; }
-
-.container {
-  height: 5rem;
-  width: 2rem;
-  background-color: #b00;
-  border-radius: 10px 0 0 10px;
-  position: absolute;
-  right: 0;
-  top: 80.5vh;
-  transition: all 0.3s;
-  box-shadow: 2px 2px 5px #333232; }
-
 /* Main menu positionning */
 .main-nav {
   position: fixed;
@@ -535,7 +455,10 @@ header {
   margin: 0 auto;
   background: #e6e6e6;
   transform: skew(5deg);
-  transition: all 0.275s; }
+  transition: all 0.275s;
+  /*   @media screen and (min-width: 350px) and (max-width: 1000px) {
+    display: none;
+  } */ }
   .burger:after, .burger:before {
     content: "";
     display: block;
@@ -546,9 +469,6 @@ header {
     transform: translateY(-12px) translateX(-2px) skew(-20deg); }
   .burger:before {
     transform: translateY(-16px) skew(-10deg); }
-  @media screen and (min-width: 350px) and (max-width: 1000px) {
-    .burger {
-      display: none; } }
 
 /* Toggle State part */
 .is-open .burger {
