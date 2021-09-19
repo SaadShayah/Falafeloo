@@ -1,0 +1,16 @@
+@import "abstracts/_mixins.scss";
+@import "abstracts/_variables.scss";
+@import "abstracts/animations.scss";
+
+@import "base/_base.scss";
+@import "base/_typography.scss";
+
+@import "components/_menuItem.scss";
+@import "components/_slider.scss";
+@import "components/_modal.scss";
+
+@import "layout/_header.scss";
+@import "layout/_navigation.scss";
+@import "layout/_about.scss";
+@import "layout/_sideMenue.scss";
+@import "layout/_footer.scss";

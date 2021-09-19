@@ -1,0 +1,125 @@
+header {
+  height: 100vh;
+  margin-bottom: 15rem;
+}
+
+.header {
+  height: 100vh;
+
+  &__main {
+    height: 75%;
+    background-color: black;
+    overflow: visible;
+
+    @media only screen and(max-width:600px) {
+      height: 85%;
+    }
+  }
+
+  &__sub {
+    background-color: $red-dark2;
+    height: 25%;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+    }
+    @media only screen and(max-width:600px) {
+      height: 15%;
+    }
+  }
+}
+
+.hero {
+  padding: 1rem 2rem;
+  line-height: 2.8rem;
+  display: flex;
+
+  &-text {
+    padding: 10rem 7rem 0 2rem;
+    width: 65%;
+
+    @media only screen and(max-width:1000px) {
+      width: 100%;
+    }
+    @media only screen and(max-width:600px) {
+      padding: 6rem 2rem;
+    }
+    @media only screen and(max-width:300px) {
+      padding: 3rem 0.5rem;
+    }
+  }
+
+  &__bg {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__sml {
+    font-size: 1.8rem;
+    font-weight: 100;
+  }
+
+  &__img {
+    position: relative;
+    width: 35%;
+    z-index: 9;
+    @media only screen and(max-width:1000px) {
+      display: none;
+    }
+
+    img {
+      height: 80%;
+      margin-left: -10rem;
+    }
+  }
+}
+
+.menu-btn {
+  margin-top: 4rem;
+  background: linear-gradient(
+    270deg,
+    #4f0101 -18.42%,
+    #ff0000 54.27%,
+    #560000 112.61%
+  );
+  box-shadow: -1px 4px 2px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  font-size: 1rem;
+  color: white;
+  padding: 0.6rem 1rem;
+  font-family: $font-russo;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+
+  @media only screen and(max-width:300px) {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+  }
+}
+
+.side-btn {
+  position: fixed;
+  left: 0;
+  top: 35vh;
+  transform: rotateZ(90deg);
+  padding-top: 0.3rem;
+  padding-bottom: 0.1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: $font-russo;
+  border-radius: 100px 100px 0 0;
+  background-color: $red-dark1;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  margin-left: -1.9rem;
+  border: 1px solid rgba(224, 214, 214, 0.682);
+  cursor: pointer;
+}

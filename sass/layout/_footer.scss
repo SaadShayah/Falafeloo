@@ -1,0 +1,86 @@
+.footer-container {
+  background: linear-gradient(
+    189.83deg,
+    rgba(63, 2, 2, 0.5) 14.34%,
+    rgba(252, 12, 12, 0.3) 46.28%,
+    rgba(84, 12, 12, 0.5) 84.82%
+  );
+  border-radius: 10px 10px 0 0;
+  box-shadow: inset -1px -1px 3px $grey-light3;
+  padding: 5rem;
+  padding-top: 4rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 800px) {
+    padding: 2rem;
+  }
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  border-radius: 20px;
+  position: absolute;
+  height: 200px;
+  width: 250px;
+}
+
+.mapouter {
+  text-align: right;
+  height: 200px;
+  width: 250px;
+}
+
+.footer__nav {
+  display: flex;
+  list-style: none;
+  margin-top: 2rem;
+
+  &__element {
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin-right: 3rem;
+
+    &:hover {
+      color: $red;
+    }
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: white;
+    }
+    @media only screen and (max-width: 350px) {
+      font-size: 1.2rem;
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+.contact-data {
+  display: block;
+  .tile {
+    font-size: 1.2rem;
+    font-family: $font-russo;
+    margin: 1rem 0;
+
+    &__icon {
+      font-size: 2rem;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+      @media only screen and (max-width: 350px) {
+        font-size: 1.5rem;
+      }
+    }
+    @media only screen and (max-width: 350px) {
+      font-size: 0.8rem;
+    }
+  }
+}

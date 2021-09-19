@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+    initial-scale=1.0,minimum-scale=1"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>falafeelo</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <div class="header__main">
+          <div class="hero">
+            <div class="hero-text">
+              <p class="hero__bg">Фалафель</p>
+              <p class="hero__sml">
+                Горох, специальная приправа помидор, ТХИНА , айзберг
+                салат,огурец, мята
+              </p>
+              <button class="menu-btn" id="main-btn">
+                Закажите еду на дом
+              </button>
+            </div>
+            <figure class="hero__img">
+              <img src="assets/images/floating-beef-burger.png" alt="" />
+            </figure>
+          </div>
+        </div>
+        <div class="header__sub"></div>
+      </div>
+
+      <button id="burger" class="open-main-nav">
+        <span class="burger"></span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li>
+            <a href="#" id="homeNav" class="navAnchor">главного</a>
+          </li>
+          <li>
+            <a href="#TheMenu" id="menuNav" class="navAnchor">меню</a>
+          </li>
+          <li>
+            <a href="#aboutSection" id="aboutNav" class="navAnchor"
+              >О компании</a
+            >
+          </li>
+          <li>
+            <a href="#footer" id="contactNav" class="navAnchor">Контактная</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="side-bar hide" id="sideBar">
+        <button class="close" id="close-btn">&#9747;</button>
+        <div class="side-bar__elem" id="falafel_btn">
+          <p class="side-bar__elem__title">Falafel</p>
+          <img src="assets/images/falafel_ctg.jpg" alt="" />
+        </div>
+        <div class="side-bar__elem" id="shawarma_btn">
+          <p class="side-bar__elem__title">Shawarma</p>
+          <img src="assets/images/shawarma_ctg.jpg" alt="Shawarma" />
+        </div>
+        <div class="side-bar__elem" id="broasted_btn">
+          <p class="side-bar__elem__title">Broasteds</p>
+          <img src="assets/images/broasted_ctg.jpg" alt="Broasteds" />
+        </div>
+        <div class="side-bar__elem" id="burger_btn">
+          <p class="side-bar__elem__title">Burger</p>
+          <img src="assets/images/burger_ctg.webp" alt="Burger" />
+        </div>
+        <div class="side-bar__elem" id="apptizers_btn">
+          <p class="side-bar__elem__title">Apptizers</p>
+          <img src="assets/images/apptizers_ctg.jpg" alt="Apptizers" />
+        </div>
+        <div class="side-bar__elem">
+          дер
+          <p class="side-bar__elem__title">Cold Drinks</p>
+          <img src="assets/images/cold_drinks_ctg.jpeg" alt="Cold Drinks" />
+        </div>
+        <div class="side-bar__elem">
+          <p class="side-bar__elem__title">Hot Drinks</p>
+          <img src="assets/images/hot_drinks_ctg.jpg" alt="Hot Drinks" />
+        </div>
+      </div>
+      <button class="side-btn">Menu</button>
+    </header>
+    <main>
+      <section class="menu" id="TheMenu">
+        <div class="firstContainer">
+          <p class="firstContainer__title" id="">Шаурма</p>
+          <div class="mealItem" id="00">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/1.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Курица, майонез, помидор,картофель, сыр,солёный огурец,салат с
+                зеленью
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Шаурма от шеф повара</p>
+          </div>
+          <div class="mealItem" id="01">
+            <p class="mealItem__price">160 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/2.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Курица, майонез, помидор, картофель, солёный огурец,салат с
+                зеленью
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Шаурма</p>
+          </div>
+          <div class="mealItem" id="02">
+            <p class="mealItem__price">300 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/1.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Курица, майонез, помидор,картофель, сыр,солёный огурец,салат с
+                зеленью
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Шаурма от шефа /большая/</p>
+          </div>
+          <div class="mealItem" id="03">
+            <p class="mealItem__price">250 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/4.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Курица, майонез, помидор,картофель+сыр,солёный огурец,салат с
+                зеленью
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Шаурма по Арабски</p>
+          </div>
+          <div class="mealItem" id="04">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/3.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Арабский хлеб, куриное филе,красный болгарский перец,зеленый
+                лук, кукуруза,приправа, майонез,грибы, картофель
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Мексикану</p>
+          </div>
+          <div class="mealItem" id="05">
+            <p class="mealItem__price">350 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/5.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Шаурма с курицей впанировке, чесночныйсоус, картофель фрикетчуп
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Шаурма панне</p>
+          </div>
+          <div class="mealItem" id="06">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/6.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Стрипсы, майонез, помидор,сыр, солёный огурец,салат с зеленью
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Цезарь ролл</p>
+          </div>
+          <div class="mealItem" id="07">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/7.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Курица, майонез, помидор,картофель, солёный огурец,салат с
+                зеленью, хлеб пита
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Шаурма гиро</p>
+          </div>
+        </div>
+        <div class="firstContainer">
+          <p class="firstContainer__title" id="">Хрустящие</p>
+          <div class="mealItem" id="10">
+            <p class="mealItem__price">250 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/8.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Крылышки 8шт</p>
+          </div>
+          <div class="mealItem" id="11">
+            <p class="mealItem__price">470 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/8.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Крылышки 16шт</p>
+          </div>
+          <div class="mealItem" id="12">
+            <p class="mealItem__price">350 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/9.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                кетчуп, чесночный соус,кока-кола
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Комбо 8шт</p>
+          </div>
+          <div class="mealItem" id="13">
+            <p class="mealItem__price">680 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/9.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                картофель,кетчуп, чесночный соус,кока-кола
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Комбо 16шт</p>
+          </div>
+        </div>
+        <div class="firstContainer">
+          <p class="firstContainer__title" id="broasted">Бургеры</p>
+          <div class="mealItem" id="20">
+            <p class="mealItem__price">240 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/10.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Булочка, котлета мяснаяиз баранины, помидор,листья салата ,сыр
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Бургер от шеф-повара</p>
+          </div>
+          <div class="mealItem" id="21">
+            <p class="mealItem__price">240 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/11.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Булочка, котлета из курицы,листья салата ,сыр
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Бургер от шеф-повара</p>
+          </div>
+          <div class="mealItem" id="22">
+            <p class="mealItem__price">380 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/12.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                картофель,кетчуп, чесночный соус,кока-кола
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Комбо от шеф-повара баранина</p>
+          </div>
+          <div class="mealItem" id="23">
+            <p class="mealItem__price">380 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/12.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Комбо от шеф-повара курица</p>
+          </div>
+        </div>
+        <div class="firstContainer">
+          <p class="firstContainer__title" id="broasted">Вегетерианское</p>
+          <div class="mealItem" id="30">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/13.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                картофель, майонез
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Бургер Фалафель</p>
+          </div>
+          <div class="mealItem" id="31">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/14.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Сэндвич салатом с сыром</p>
+          </div>
+          <div class="mealItem" id="32">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/15.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Сэндвич с картошкой</p>
+          </div>
+        </div>
+        <div class="firstContainer">
+          <p class="firstContainer__title" id="broasted">Фалафель</p>
+          <div class="mealItem" id="40">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/16.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Горох, специальная приправа,помидор, ТХИНА ,айзберг
+                салат,огурец, мята
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Фалафель</p>
+          </div>
+          <div class="mealItem" id="41">
+            <p class="mealItem__price">250 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/17.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Горох, специальная приправа,помидор, ТХИНА , айзберг
+                салат,огурец, мята
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Фалафель по Арабски</p>
+          </div>
+          <div class="mealItem" id="42">
+            <p class="mealItem__price">240 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/18.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Котлета из куриных яиц,мясо ,петрушка, лук,чеснок, приправа,
+                помидор
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Уджа с мясом</p>
+          </div>
+          <div class="mealItem" id="43">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/19.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Котлета из куриных яиц,петрушка, лук, чеснок,приправа, помидор
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Уджа</p>
+          </div>
+          <div class="mealItem" id="44">
+            <p class="mealItem__price">150 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/20.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Горох, специальная приправа 5шт (веган)
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Фалафель штучный</p>
+          </div>
+        </div>
+        <div class="firstContainer">
+          <p class="firstContainer__title" id="broasted">Шашлык</p>
+          <div class="mealItem" id="50">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/21.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Мясо баранины
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Люля кебаб</p>
+          </div>
+          <div class="mealItem" id="51">
+            <p class="mealItem__price">160 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/21.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">Курица</figcaption>
+            </figure>
+            <p class="mealItem__title">Люля кебаб</p>
+          </div>
+          <div class="mealItem" id="52">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/22.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Шашлык (баранина)</p>
+          </div>
+          <div class="mealItem" id="53">
+            <p class="mealItem__price">160 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/23.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Курица,майонез,помидор,петрушка,лук ,лимон.
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Шиш тауук</p>
+          </div>
+          <div class="mealItem" id="54">
+            <p class="mealItem__price">900 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/24.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                ассортименте
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Шашлык в</p>
+          </div>
+          <div class="mealItem" id="55">
+            <p class="mealItem__price">1750 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/24.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                ассортименте
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Шашлык в</p>
+          </div>
+        </div>
+        <div class="firstContainer">
+          <p class="firstContainer__title" id="broasted">Закуски</p>
+          <div class="mealItem" id="60">
+            <p class="mealItem__price">60 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/25.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Фри</p>
+          </div>
+          <div class="mealItem" id="61">
+            <p class="mealItem__price">100 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/25.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Фри</p>
+          </div>
+          <div class="mealItem" id="62">
+            <p class="mealItem__price">200 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/26.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Фри (большая)</p>
+          </div>
+          <div class="mealItem" id="63">
+            <p class="mealItem__price">160 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/27.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Арабский хлеб,мясной фарш,помидор, болгарский перец
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">АРАЕС с мясом</p>
+          </div>
+          <div class="mealItem" id="64">
+            <p class="mealItem__price">140 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/28.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Сыр в арабской пите, помидор, мята, оливковое масло, кунжут
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Араес Сыр (веган)</p>
+          </div>
+          <div class="mealItem" id="65">
+            <p class="mealItem__price">180 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/29.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Арабский хлеб, сыр, мясной фарш, помидор, болгарский перец
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">АРАЕС мясом с сыром</p>
+          </div>
+          <div class="mealItem" id="66">
+            <p class="mealItem__price">180 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/30.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                Мясо баранины со специальной приправой, чеснок, помидор, огурец
+                соленый.
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">Суджук</p>
+          </div>
+          <div class="mealItem" id="67">
+            <p class="mealItem__price">180 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/31.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption">
+                с аджика арабская (острое)
+              </figcaption>
+            </figure>
+            <p class="mealItem__title">АРАЕС сыр</p>
+          </div>
+          <div class="mealItem" id="68">
+            <p class="mealItem__price">140 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/31.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">АРАЕС аджика</p>
+          </div>
+          <div class="mealItem" id="69">
+            <p class="mealItem__price">150 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/32.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Хумус (сезонный)</p>
+          </div>
+          <div class="mealItem" id="610">
+            <p class="mealItem__price">150 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/33.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Мтапал (сезонный)</p>
+          </div>
+          <div class="mealItem" id="611">
+            <p class="mealItem__price">150 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/34.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Табуле</p>
+          </div>
+          <div class="mealItem" id="612">
+            <p class="mealItem__price">150 ₽</p>
+            <figure class="mealItem__main">
+              <img
+                src="assets/images/35.webp"
+                alt="meal Image"
+                onContextMenu="return false;"
+                class="mealItem__main__img"
+              />
+              <figcaption class="mealItem__main__caption"></figcaption>
+            </figure>
+            <p class="mealItem__title">Арабский салат</p>
+          </div>
+        </div>
+      </section>
+      <section class="about" id="aboutSection">
+        <p class="heading" id="opening">
+          From the oldest city in the world (Aleppo, Syria) to the largest
+          country in the world Rusia
+        </p>
+        <div class="chapter">
+          <div class="chapter__paragraph">
+            Young people whose journey began fromthe oldest inhabited city in
+            the world12,200 years ago, according to UNESCO, to thelargest
+            country in the world. We carry with us the fragrant history of
+            AleppoAnd its natural flavors, which the city has knownfor over the
+            ages, in which flavors have developed, as well as the stories of
+            grandmothers, over morethan 122 centuries. It is long enough to
+            completethe whole oriental cuisine, and the Aleppocuisine in
+            particular
+          </div>
+          <div class="chapter__img">
+            <img
+              src="assets/images/falafel_ctg.jpg"
+              onContextMenu="return false;"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="chapter">
+          <div class="chapter__img">
+            <img
+              src="assets/images/falafel_ctg.jpg"
+              onContextMenu="return false;"
+              alt=""
+            />
+          </div>
+          <p class="chapter__paragraph">
+            In addition to being one of the most important knots on the
+            historically known Silk Road It also maintained its position as a
+            historically important commercial node, which made it acquaint
+            itself with international flavors and works to select the best and
+            the best, and then start cultivating it with the hands of its
+            farmers and the fertile lands of Syria. particular
+          </p>
+        </div>
+        <p class="heading">
+          We at Falafilo prepare these oriental recipes with their healthy
+          ingredients And its natural spices with a lot of love to make it
+          special and complete the story of oriental meals in Russia that you
+          must definitely try
+        </p>
+        <div class="chapter">
+          <p class="chapter__paragraph">
+            Aleppo spices are natural and healthy, away from artificial flavors,
+            flavor enhancers and preservatives Which scientific research has
+            proven that its continuous consumption leads to major health risks
+            that may not appear immediately.
+          </p>
+          <div class="chapter__img">
+            <img
+              src="assets/images/falafel_ctg.jpg"
+              onContextMenu="return false;"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="chapter">
+          <div class="chapter__img">
+            <img
+              src="assets/images/falafel_ctg.jpg"
+              onContextMenu="return false;"
+              alt=""
+            />
+          </div>
+          <p class="chapter__paragraph">
+            We at Falafello put health first along with distinctive flavor
+            Therefore, we use chicken and sheep meat (halal) with special
+            natural spices , which are the strongest in terms of flavor and
+            nutritional value to provide the body with its needs for a day full
+            of energy
+          </p>
+        </div>
+        <div class="chapter">
+          <p class="chapter__paragraph">
+            Aleppo cuisine is considered one of the most famous international
+            kitchens, historically and culturally, even today, where many types
+            of foods became famous and spread to the whole world. Such as
+            falafel, shawarma, kebab grilled on charcoal, and a lot of
+            appetizers and desserts specializing in pistachios, known globally
+            as Aleppo pistachios.
+          </p>
+          <div class="chapter__img">
+            <img
+              src="assets/images/falafel_ctg.jpg"
+              onContextMenu="return false;"
+              alt=""
+            />
+          </div>
+        </div>
+        <p class="heading">
+          We at Flafilo seek to present the image and civilization of our city
+          to the people of Russia, who holds one of the oldest and greatest
+          civilizations in the world with its door a picture
+        </p>
+        <div class="chapter">
+          <div class="chapter__img">
+            <img
+              src="assets/images/falafel_ctg.jpg"
+              onContextMenu="return false;"
+              alt=""
+            />
+          </div>
+          <p class="chapter__paragraph">
+            Our first step was Falafilo Restaurant, a fast food restaurant that
+            is famous in the East in general We also offer you meals from the
+            western kitchen with great attention to the details of flavor and
+            health. We re-introduce American and Western meals with natural
+            flavors with dispensing About flavor enhancers and preservatives
+            that are usually followed in western restaurants because we provide
+            our meals fresh and immediately prepared upon request.
+          </p>
+        </div>
+        <p class="heading">
+          We at Flavilo thank Russia and its loving people who embraced our
+          experience and were pleased with our delicious fast food that they are
+          not accustomed to.
+        </p>
+        <div class="chapter">
+          <div class="chapter__img">
+            <img
+              src="assets/images/falafel_ctg.jpg"
+              onContextMenu="return false;"
+              alt=""
+            />
+          </div>
+          <p class="chapter__paragraph">
+            We at Flavilo share our success with local companies to provide
+            facilities to our customer as we have partnered with online ordering
+            and home delivery sites (Delivery club -......)
+          </p>
+        </div>
+        <p class="heading">
+          We strive to satisfy you and to present the whole Aleppian cuisine in
+          an honorable manner through the following steps in the future to
+          expand it from fast food to home meals And the distinctive oriental
+          sweets, thanks to your love and support.. the path of success
+          continues
+        </p>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="contact-data">
+          <div class="tile">
+            <ion-icon name="time-outline" class="tile__icon"></ion-icon> 10AM -
+            11PM
+          </div>
+          <div class="tile">
+            <ion-icon name="call-outline" class="tile__icon"></ion-icon> +7(915)
+            200-08-09
+          </div>
+          <div class="tile">
+            <ion-icon name="mail-outline" class="tile__icon"></ion-icon>
+            falafeloo.ru@gmail.com
+          </div>
+          <div class="footer__nav">
+            <a
+              class="footer__nav__element"
+              href="https://www.facebook.com/falafeloo.ru"
+              target="_blank"
+            >
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a
+              class="footer__nav__element"
+              href="https://m.youtube.com/channel/UCIXOCJI-EmHTxkJQ2wlCmfQ/featured"
+              target="_blank"
+            >
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a
+              class="footer__nav__element"
+              href="https://www.instagram.com/falafeloo.ru/"
+              target="_blank"
+            >
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a
+              class="footer__nav__element"
+              href="https://www.tiktok.com/@falafiloo.ru"
+              target="_blank"
+            >
+              <ion-icon name="logo-tiktok"></ion-icon>
+            </a>
+          </div>
+        </div>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="250"
+              height="200"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=Proyezd%20Ugreshskiy,%202,%20Kotelniki,%20Moskovskaya%20oblast',%20Russia,%20140091&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              frameborder=""
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe
+            ><a href="https://123movies-to.org"></a><br />
+            <a href="https://www.embedgooglemap.net"
+              >interactive google map for website</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal">
+      <div class="modal__content">
+        <span class="close-button">&times;</span>
+        <div class="modal__mealImage">
+          <img
+            src="assets/images/33.webp"
+            onContextMenu="return false;"
+            alt=""
+          />
+        </div>
+        <div class="modal__txt">
+          <p class="modal__txt-title">АРАЕС сыр</p>
+          <p class="modal__txt-description">
+            Мясо баранины со специальной приправой, чеснок, помидор, огурец
+            соленый.
+          </p>
+          <div class="modal__order">
+            <button class="menu-btn modal__order-btn">Закажите еду</button>
+            <button class="menu-btn modal__order-btn">Закажите еду</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img
+      src="assets/SVGs/bottom_logo.svg"
+      onContextMenu="return false;"
+      alt=""
+      class="bottom-logo"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
