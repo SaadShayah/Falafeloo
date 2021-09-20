@@ -75,7 +75,7 @@ header {
     }
 
     img {
-      height: 80%;
+      height: 75%;
       margin-left: -10rem;
     }
   }
@@ -83,6 +83,7 @@ header {
 
 .menu-btn {
   margin-top: 4rem;
+  z-index: 999;
   background: linear-gradient(
     270deg,
     #4f0101 -18.42%,
@@ -97,6 +98,7 @@ header {
   font-family: $font-russo;
   letter-spacing: 0.1rem;
   cursor: pointer;
+  position: relative;
 
   @media only screen and(max-width:300px) {
     margin-top: 2rem;
