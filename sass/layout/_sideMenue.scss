@@ -5,7 +5,7 @@
   height: 100vh;
   width: 100vw;
   top: 0;
-  left: 0;
+  left: -100vw;
   z-index: 999999;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -36,6 +36,7 @@
     background-position: center;
     position: relative;
     border: 1px solid black;
+    cursor: pointer;
 
     &:not(:first-child) {
       margin-top: -2.5rem;
@@ -50,7 +51,6 @@
       height: 4rem;
       width: 40rem;
       transform: rotateZ(12deg);
-
       box-shadow: inset 0 -20px 30px $red-dark1;
 
       @media only screen and(min-width:300px) {
@@ -82,55 +82,40 @@
     }
   }
 
-  &::after {
-    content: "";
-    margin: -35px;
-    position: absolute;
-    top: 0;
+  &.active {
     left: 0;
-    height: 100vh;
-    width: 100vw;
-    filter: blur(20px);
-    z-index: 9999;
   }
 
   @media only screen and(min-width:300px) {
     width: 85vw;
+    left: -85vw;
   }
 
   @media only screen and(min-width:450px) {
     width: 55vw;
+    left: -55vw;
   }
 
   @media only screen and(min-width:650px) {
     width: 40vw;
+    left: -40vw;
   }
 
   @media only screen and(min-width:750px) {
     width: 35vw;
+    left: -35vw;
   }
 
   @media only screen and(min-width:1000px) {
     width: 25vw;
+    left: -25vw;
   }
 
   @media only screen and(min-width:1600px) {
     width: 16vw;
+    left: -16vw;
   }
 }
-
-.hide {
-  transition: all 0.5s;
-  transform: translateX(-20rem);
-  visibility: hidden !important;
-}
-
-.show {
-  transition: all 0.5s;
-  transform: translateX(0rem);
-  visibility: visible !important;
-}
-
 .close {
   position: absolute;
   top: 0.2rem;
@@ -141,4 +126,5 @@
   border: 0;
   height: 1rem;
   width: 2rem;
+  cursor: pointer;
 }

@@ -28,6 +28,10 @@
       <div class="header">
         <div class="header__main">
           <div class="hero">
+            <div
+              id="particles-js"
+              style="position: absolute; width: 100%; z-index: 99"
+            ></div>
             <div class="hero-text">
               <p class="hero__bg">Фалафель</p>
               <p class="hero__sml">
@@ -68,7 +72,7 @@
         </ul>
       </nav>
 
-      <div class="side-bar hide" id="sideBar">
+      <div class="side-bar" id="sideBar">
         <button class="close" id="close-btn">&#9747;</button>
         <div class="side-bar__elem" id="falafel_btn">
           <p class="side-bar__elem__title">Falafel</p>
@@ -91,11 +95,10 @@
           <img src="assets/images/apptizers_ctg.jpg" alt="Apptizers" />
         </div>
         <div class="side-bar__elem">
-          дер
           <p class="side-bar__elem__title">Cold Drinks</p>
           <img src="assets/images/cold_drinks_ctg.jpeg" alt="Cold Drinks" />
         </div>
-        <div class="side-bar__elem">
+        <div class="side-bar__elem" id="hot">
           <p class="side-bar__elem__title">Hot Drinks</p>
           <img src="assets/images/hot_drinks_ctg.jpg" alt="Hot Drinks" />
         </div>
@@ -104,7 +107,7 @@
     </header>
     <main>
       <section class="menu" id="TheMenu">
-        <div class="firstContainer">
+        <div class="firstContainer" id="shawarma_ctg">
           <p class="firstContainer__title" id="">Шаурма</p>
           <div class="mealItem" id="00">
             <p class="mealItem__price">200 ₽</p>
@@ -233,7 +236,7 @@
             <p class="mealItem__title">Шаурма гиро</p>
           </div>
         </div>
-        <div class="firstContainer">
+        <div class="firstContainer" id="broasted_ctg">
           <p class="firstContainer__title" id="">Хрустящие</p>
           <div class="mealItem" id="10">
             <p class="mealItem__price">250 ₽</p>
@@ -292,8 +295,8 @@
             <p class="mealItem__title">Комбо 16шт</p>
           </div>
         </div>
-        <div class="firstContainer">
-          <p class="firstContainer__title" id="broasted">Бургеры</p>
+        <div class="firstContainer" id="burger_ctg">
+          <p class="firstContainer__title">Бургеры</p>
           <div class="mealItem" id="20">
             <p class="mealItem__price">240 ₽</p>
             <figure class="mealItem__main">
@@ -354,7 +357,7 @@
           </div>
         </div>
         <div class="firstContainer">
-          <p class="firstContainer__title" id="broasted">Вегетерианское</p>
+          <p class="firstContainer__title">Вегетерианское</p>
           <div class="mealItem" id="30">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
@@ -397,8 +400,8 @@
             <p class="mealItem__title">Сэндвич с картошкой</p>
           </div>
         </div>
-        <div class="firstContainer">
-          <p class="firstContainer__title" id="broasted">Фалафель</p>
+        <div class="firstContainer" id="falafel_ctg">
+          <p class="firstContainer__title">Фалафель</p>
           <div class="mealItem" id="40">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
@@ -478,8 +481,8 @@
             <p class="mealItem__title">Фалафель штучный</p>
           </div>
         </div>
-        <div class="firstContainer">
-          <p class="firstContainer__title" id="broasted">Шашлык</p>
+        <div class="firstContainer" id="barbique_ctg">
+          <p class="firstContainer__title">Шашлык</p>
           <div class="mealItem" id="50">
             <p class="mealItem__price">200 ₽</p>
             <figure class="mealItem__main">
@@ -567,7 +570,7 @@
             <p class="mealItem__title">Шашлык в</p>
           </div>
         </div>
-        <div class="firstContainer">
+        <div class="firstContainer" id="apptizers_ctg">
           <p class="firstContainer__title" id="broasted">Закуски</p>
           <div class="mealItem" id="60">
             <p class="mealItem__price">60 ₽</p>
@@ -769,7 +772,7 @@
           </div>
           <div class="chapter__img">
             <img
-              src="assets/images/falafel_ctg.jpg"
+              src="assets/images/aleppo-citadel.webp"
               onContextMenu="return false;"
               alt=""
             />
@@ -778,7 +781,7 @@
         <div class="chapter">
           <div class="chapter__img">
             <img
-              src="assets/images/falafel_ctg.jpg"
+              src="assets/images/trade-route.webp"
               onContextMenu="return false;"
               alt=""
             />
@@ -792,22 +795,17 @@
             farmers and the fertile lands of Syria. particular
           </p>
         </div>
-        <p class="heading">
-          We at Falafilo prepare these oriental recipes with their healthy
-          ingredients And its natural spices with a lot of love to make it
-          special and complete the story of oriental meals in Russia that you
-          must definitely try
-        </p>
+        <p class="heading"></p>
         <div class="chapter">
           <p class="chapter__paragraph">
-            Aleppo spices are natural and healthy, away from artificial flavors,
-            flavor enhancers and preservatives Which scientific research has
-            proven that its continuous consumption leads to major health risks
-            that may not appear immediately.
+            We at Falafilo prepare these oriental recipes with their healthy
+            ingredients And its natural spices with a lot of love to make it
+            special and complete the story of oriental meals in Russia that you
+            must definitely try
           </p>
           <div class="chapter__img">
             <img
-              src="assets/images/falafel_ctg.jpg"
+              src="assets/images/aleppo-cusin.webp"
               onContextMenu="return false;"
               alt=""
             />
@@ -821,6 +819,14 @@
               alt=""
             />
           </div>
+          <p class="chapter__paragraph">
+            Aleppo spices are natural and healthy, away from artificial flavors,
+            flavor enhancers and preservatives Which scientific research has
+            proven that its continuous consumption leads to major health risks
+            that may not appear immediately.
+          </p>
+        </div>
+        <div class="chapter">
           <p class="chapter__paragraph">
             We at Falafello put health first along with distinctive flavor
             Therefore, we use chicken and sheep meat (halal) with special
@@ -828,72 +834,63 @@
             nutritional value to provide the body with its needs for a day full
             of energy
           </p>
-        </div>
-        <div class="chapter">
-          <p class="chapter__paragraph">
-            Aleppo cuisine is considered one of the most famous international
-            kitchens, historically and culturally, even today, where many types
-            of foods became famous and spread to the whole world. Such as
-            falafel, shawarma, kebab grilled on charcoal, and a lot of
-            appetizers and desserts specializing in pistachios, known globally
-            as Aleppo pistachios.
-          </p>
           <div class="chapter__img">
             <img
-              src="assets/images/falafel_ctg.jpg"
+              src="assets/images/human-power.webp"
               onContextMenu="return false;"
               alt=""
             />
           </div>
         </div>
         <p class="heading">
-          We at Flafilo seek to present the image and civilization of our city
-          to the people of Russia, who holds one of the oldest and greatest
-          civilizations in the world with its door a picture
+          Aleppo cuisine is considered one of the most famous international
+          kitchens, historically and culturally, even today, where many types of
+          foods became famous and spread to the whole world. Such as falafel,
+          shawarma, kebab grilled on charcoal, and a lot of appetizers and
+          desserts specializing in pistachios, known globally as Aleppo
+          pistachios.
         </p>
         <div class="chapter">
           <div class="chapter__img">
             <img
-              src="assets/images/falafel_ctg.jpg"
+              src="assets/images/syrial-land.webp"
               onContextMenu="return false;"
               alt=""
             />
           </div>
           <p class="chapter__paragraph">
-            Our first step was Falafilo Restaurant, a fast food restaurant that
-            is famous in the East in general We also offer you meals from the
-            western kitchen with great attention to the details of flavor and
-            health. We re-introduce American and Western meals with natural
-            flavors with dispensing About flavor enhancers and preservatives
-            that are usually followed in western restaurants because we provide
-            our meals fresh and immediately prepared upon request.
+            We at Flafilo seek to present the image and civilization of our city
+            to the people of Russia, who holds one of the oldest and greatest
+            civilizations in the world with its door a picture
           </p>
         </div>
         <p class="heading">
-          We at Flavilo thank Russia and its loving people who embraced our
-          experience and were pleased with our delicious fast food that they are
-          not accustomed to.
+          Our first step was Falafilo Restaurant, a fast food restaurant that is
+          famous in the East in general We also offer you meals from the western
+          kitchen with great attention to the details of flavor and health. We
+          re-introduce American and Western meals with natural flavors with
+          dispensing About flavor enhancers and preservatives that are usually
+          followed in western restaurants because we provide our meals fresh and
+          immediately prepared upon request.
         </p>
         <div class="chapter">
           <div class="chapter__img">
             <img
-              src="assets/images/falafel_ctg.jpg"
+              src="assets/images/russian-flag.webp"
               onContextMenu="return false;"
               alt=""
             />
           </div>
           <p class="chapter__paragraph">
-            We at Flavilo share our success with local companies to provide
-            facilities to our customer as we have partnered with online ordering
-            and home delivery sites (Delivery club -......)
+            We at Flavilo thank Russia and its loving people who embraced our
+            experience and were pleased with our delicious fast food that they
+            are not accustomed to.
           </p>
         </div>
         <p class="heading">
-          We strive to satisfy you and to present the whole Aleppian cuisine in
-          an honorable manner through the following steps in the future to
-          expand it from fast food to home meals And the distinctive oriental
-          sweets, thanks to your love and support.. the path of success
-          continues
+          We at Flavilo share our success with local companies to provide
+          facilities to our customer as we have partnered with online ordering
+          and home delivery sites (Delivery club -......)
         </p>
       </section>
     </main>
@@ -1000,6 +997,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="JS/main.js"></script>
   </body>
 </html>
