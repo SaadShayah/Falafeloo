@@ -20,6 +20,7 @@ header {
     background-color: $red-dark2;
     height: 25%;
     position: relative;
+    z-index: 110;
 
     &::before {
       content: "";
@@ -69,7 +70,7 @@ header {
   &__img {
     position: relative;
     width: 35%;
-    z-index: 9;
+    z-index: 120;
     @media only screen and(max-width:1000px) {
       display: none;
     }
@@ -83,7 +84,7 @@ header {
 
 .menu-btn {
   margin-top: 4rem;
-  z-index: 999;
+  z-index: 200;
   background: linear-gradient(
     270deg,
     #4f0101 -18.42%,
@@ -120,7 +121,7 @@ header {
   background-color: $red-dark1;
   color: white;
   font-size: 0.8rem;
-  letter-spacing: 0.1rem;   
+  letter-spacing: 0.1rem;
   margin-left: -1.9rem;
   border: 1px solid rgba(224, 214, 214, 0.682);
   cursor: pointer;

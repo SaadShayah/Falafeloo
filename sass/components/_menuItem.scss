@@ -118,17 +118,13 @@
       width: 100%;
       background-size: cover;
       transition: filter 0.3s;
-
-      // &:hover {
-      //   filter: blur(10px) brightness(85%);
-      // }
     }
 
     &__caption {
       position: absolute;
       bottom: 1rem;
       left: 0.5rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
       width: 15rem;
       transition: all 0.3s;
     }
