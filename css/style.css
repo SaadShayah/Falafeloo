@@ -139,7 +139,7 @@ body {
       position: absolute;
       bottom: 1rem;
       left: 0.5rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
       width: 15rem;
       transition: all 0.3s; }
   .mealItem__title {
@@ -225,7 +225,8 @@ body {
           font-size: 1.5rem; } }
     .modal__txt-description {
       margin-top: 2rem;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      line-height: 1.7; }
       @media only screen and (max-width: 1200px) {
         .modal__txt-description {
           font-size: 1.3rem; } }
@@ -235,10 +236,19 @@ body {
     margin-top: auto;
     width: 100%; }
     .modal__order-btn {
-      margin: 1rem 0.5rem; }
+      margin: 1rem 0.5rem;
+      height: 3rem;
+      border: 1px solid white;
+      transition: all 0.2s;
+      text-decoration: none; }
       @media only screen and (max-width: 1000px) {
         .modal__order-btn:first-child {
           margin-bottom: -2.5rem; } }
+      .modal__order-btn:active {
+        transform: scale(1.1); }
+      .modal__order-btn-icon {
+        height: 100%;
+        vertical-align: middle; }
     @media only screen and (max-width: 1000px) {
       .modal__order {
         flex-direction: column;
@@ -277,7 +287,8 @@ header {
   .header__sub {
     background-color: #800;
     height: 25%;
-    position: relative; }
+    position: relative;
+    z-index: 110; }
     .header__sub::before {
       content: "";
       position: absolute;
@@ -315,7 +326,7 @@ header {
   .hero__img {
     position: relative;
     width: 35%;
-    z-index: 9; }
+    z-index: 120; }
     @media only screen and (max-width: 1000px) {
       .hero__img {
         display: none; } }
@@ -325,7 +336,7 @@ header {
 
 .menu-btn {
   margin-top: 4rem;
-  z-index: 999;
+  z-index: 200;
   background: linear-gradient(270deg, #4f0101 -18.42%, #ff0000 54.27%, #560000 112.61%);
   box-shadow: -1px 4px 2px 1px rgba(0, 0, 0, 0.4);
   border-radius: 16px;
@@ -368,14 +379,12 @@ header {
   text-align: center;
   background: #333232;
   opacity: 0;
-  z-index: -1;
   visibility: hidden;
   transition: all 0.375s;
   width: 100%;
   height: 100vh;
   font-size: 1rem;
   font-family: "Russo One", sans-serif;
-  /* Yellow band effect */
   /* Skewing effect on menu links */
   /* Apparition effect on links */ }
   .main-nav::before {
@@ -391,7 +400,7 @@ header {
     transition: all 0.275s 0.1s; }
   .main-nav.is-open {
     opacity: 1;
-    z-index: 100;
+    z-index: 999;
     visibility: visible; }
     .main-nav.is-open::before {
       transform: skew(-14deg) translateX(0); }
@@ -503,7 +512,8 @@ header {
   letter-spacing: 0.1rem;
   gap: 2rem; }
   .chapter__paragraph {
-    width: 75%; }
+    width: 75%;
+    line-height: 1.7; }
     @media only screen and (max-width: 1000px) {
       .chapter__paragraph {
         width: 65%; } }
@@ -514,8 +524,7 @@ header {
     border-radius: 20px;
     width: 25%;
     position: relative;
-    box-shadow: 10px 0 20px #333232;
-    max-height: 10rem; }
+    box-shadow: 10px 0 20px #333232; }
     .chapter__img img {
       width: 80%;
       border-radius: 20px; }

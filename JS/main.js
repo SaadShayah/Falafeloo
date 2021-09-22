@@ -19,14 +19,12 @@ const sideBtn = document.querySelector(".side-btn"),
   burger = document.getElementById("burger"),
   sideElement = document.querySelectorAll(".side-bar__elem"),
   nav = document.getElementById("main-nav");
-const broastedBtn = document.getElementById("broasted_btn"),
-  burgerBtn = document.getElementById("burger_btn"),
-  apptizersBtn = document.getElementById("apptizers_btn"),
-  shawarmaCtg = document.getElementById("shawarma_ctg"),
+const shawarmaCtg = document.getElementById("shawarma_ctg"),
   broastedCtg = document.getElementById("broasted_ctg"),
   burgerCtg = document.getElementById("burger_ctg"),
   falafelCtg = document.getElementById("falafel_ctg"),
-  apptizersCtg = document.getElementById("apptizers_ctg");
+  apptizersCtg = document.getElementById("apptizers_ctg"),
+  barbecueCtg = document.getElementById("barbeque_ctg");
 
 // responsible of opening and closing the main nav
 function toggleMainNav() {
@@ -108,6 +106,9 @@ sideElement.forEach((item) => {
         break;
       case "apptizers_btn":
         apptizersCtg.scrollIntoView({ behavior: "smooth", block: "start" });
+        break;
+      case "barbecue_btn":
+        barbecueCtg.scrollIntoView({ behavior: "smooth", block: "start" });
         break;
     }
   });
@@ -413,13 +414,13 @@ let meals = [
       img: "assets/images/24.webp",
       lbl: "Шашлык в",
       price: "900",
-      desc: "ассортименте",
+      desc: "ассортименте (500г)",
     },
     {
       img: "assets/images/24.webp",
       lbl: "Шашлык в",
       price: "1750",
-      desc: "ассортименте",
+      desc: "ассортименте (1кг)",
     },
   ],
   [
