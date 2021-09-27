@@ -82,7 +82,6 @@
   &__order {
     display: flex;
     justify-content: space-around;
-    margin-top: auto;
     width: 100%;
 
     &-btn {
@@ -91,12 +90,20 @@
       border: 1px solid white;
       transition: all 0.2s;
       text-decoration: none;
-
-      &:first-child {
-        @media only screen and(max-width:1000px) {
-          margin-bottom: -2.5rem;
-        }
-      }
+      background: linear-gradient(
+        270deg,
+        #4f0101 -18.42%,
+        #ce0e0e 54.27%,
+        #560000 112.61%
+      );
+      border-radius: 16px;
+      font-size: 1rem;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      font-family: $font-russo;
+      letter-spacing: 0.1rem;
+      cursor: pointer;
+      border: 1px solid white;
 
       &:active {
         transform: scale(1.1);
@@ -108,7 +115,7 @@
       }
     }
 
-    @media only screen and(max-width:1000px) {
+    @media only screen and(max-width:1100px) {
       flex-direction: column;
       height: 35%;
       padding: 0 0 1rem 0;

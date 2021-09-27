@@ -10,6 +10,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   overflow-y: scroll;
+  overflow-x: hidden;
   transition: all 0.5s;
   visibility: visible;
   border-radius: 0 25px 25px 0;
