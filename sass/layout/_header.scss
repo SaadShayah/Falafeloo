@@ -59,7 +59,7 @@ header {
 
   &__bg {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   &__sml {
@@ -83,23 +83,25 @@ header {
 }
 
 .menu-btn {
-  margin-top: 4rem;
+  margin-top: 8rem;
+  margin-left: 25%;
   z-index: 200;
   background: linear-gradient(
     270deg,
     #4f0101 -18.42%,
-    #ff0000 54.27%,
+    #ce0e0e 54.27%,
     #560000 112.61%
   );
-  box-shadow: -1px 4px 2px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: -10px 4px 2px 1px rgba(0, 0, 0, 0.4);
   border-radius: 16px;
   font-size: 1rem;
   color: white;
-  padding: 0.6rem 1rem;
+  padding: 0.7rem 1.2rem;
   font-family: $font-russo;
   letter-spacing: 0.1rem;
   cursor: pointer;
   position: relative;
+  border: 1px solid white;
 
   @media only screen and(max-width:300px) {
     margin-top: 2rem;
@@ -109,7 +111,8 @@ header {
 
 .side-btn {
   position: fixed;
-  left: 0;
+  left: -5px;
+  transform-origin: top;
   top: 35vh;
   transform: rotateZ(90deg);
   padding-top: 0.3rem;
@@ -123,6 +126,8 @@ header {
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
   margin-left: -1.9rem;
-  border: 1px solid rgba(224, 214, 214, 0.682);
+  border: none;
+
+  // border: 1px solid rgba(224, 214, 214, 0.682);
   cursor: pointer;
 }

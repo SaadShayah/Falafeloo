@@ -278,6 +278,13 @@ let meals = [
       price: "200",
       desc: "Стрипсы, майонез, помидор,сыр, солёный огурец,салат с зеленью",
     },
+
+    {
+      img: "assets/images/7.webp",
+      lbl: "Шаурма гиро",
+      price: "200",
+      desc: "Курица, майонез, помидор,картофель, солёный огурец,салат с зеленью, хлеб пита",
+    },
   ],
   [
     {
@@ -391,6 +398,12 @@ let meals = [
       desc: "Мясо баранины",
     },
     {
+      img: "assets/images/21.webp",
+      lbl: "Люля кебаб",
+      price: "160",
+      desc: "Курица",
+    },
+    {
       img: "assets/images/22.webp",
       lbl: "Шашлык (баранина)",
       price: "200",
@@ -496,47 +509,45 @@ let meals = [
     },
   ],
 ];
-
+/* 
 let html = "",
   title = "",
   id = "";
 for (let i = 0, l = meals.length; l > i; i++) {
+  html += '<div class="firstContainer">';
+
   switch (i) {
     case 0:
       title = "Шаурма";
-      id = "shawarma_ctg";
       break;
     case 1:
       title = "Хрустящие";
-      id = "broasted_ctg";
       break;
     case 2:
       title = "Бургеры";
-      id = "burger_ctg";
+      id = "broasted";
       break;
     case 3:
       title = "Вегетерианское";
       break;
     case 4:
       title = "Фалафель";
-      id = "falafel_ctg";
       break;
     case 5:
       title = "Шашлык";
-      id = "barbeque_ctg";
       break;
     case 6:
       title = "Закуски";
-      id = "apptizers_ctg";
       break;
   }
 
-  html += `<div class="firstContainer" id="${id}">`;
-  html += `<p class="firstContainer__title">${title}</p>`;
+  html += `<p class="firstContainer__title" id="${id}">${title}</p>`;
   for (let j = 0, s = meals[i].length; s > j; j++) {
     html += `<div class="mealItem" id="${i}${j}">`;
+    html += `<p class="mealItem__price">${meals[i][j].price} ₽</p>`;
     html += ' <figure class="mealItem__main">';
     html += ` <img src="${meals[i][j].img}" alt="meal Image" onContextMenu="return false;" class="mealItem__main__img"/>`;
+    html += ` <figcaption class="mealItem__main__caption">${meals[i][j].desc}</figcaption>`;
     html += " </figure>";
     html += `  <p class="mealItem__title">${meals[i][j].lbl}</p>`;
     html += " </div>";
@@ -544,4 +555,4 @@ for (let i = 0, l = meals.length; l > i; i++) {
   html += "</div>";
 }
 
-console.log(html);
+console.log(html); */
