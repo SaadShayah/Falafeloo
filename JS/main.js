@@ -307,14 +307,14 @@ let meals = [
   ],
   [
     {
-      img: "assets/images/10.webp",
+      img: "assets/images/11.webp",
       lbl: "Бургер от шеф-повара",
       price: "240",
       desc: "Булочка, котлета мяснаяиз баранины, помидор,листья салата ,сыр",
     },
     {
       img: "assets/images/11.webp",
-      lbl: "Бургер от шеф-повара",
+      lbl: "Бургер от шеф-повара (курица)",
       price: "240",
       desc: " Булочка, котлета из курицы,листья салата ,сыр",
     },
@@ -419,12 +419,6 @@ let meals = [
     {
       img: "assets/images/25.webp",
       lbl: "Фри",
-      price: "60",
-      desc: "",
-    },
-    {
-      img: "assets/images/25.webp",
-      lbl: "Фри",
       price: "100",
       desc: "",
     },
@@ -497,6 +491,8 @@ let meals = [
   ],
 ];
 
+
+/* 
 let html = "",
   title = "",
   id = "";
@@ -545,3 +541,4 @@ for (let i = 0, l = meals.length; l > i; i++) {
 }
 
 console.log(html);
+ */

@@ -5,34 +5,34 @@ footer {
     rgba(252, 12, 12, 0.3) 46.28%,
     rgba(84, 12, 12, 0.5) 84.82%
   );
-  padding: 3rem;
+  padding: 5rem;
   padding-top: 2rem;
   border-radius: 10px 10px 0 0;
   box-shadow: inset -1px -1px 3px $grey-light3;
 
   @media only screen and (max-width: 800px) {
-    padding: 2rem;
+    padding: 2rem;    
   }
-}
+}     
 
 .footer__title {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 700;   
   position: relative;
 
   &::after {
     content: "";
-    height: 1px;
+    height: 1px;    
     width: 100%;
-    position: absolute;
-    bottom: -20px;
+    position: absolute;     
+    bottom: -20px;  
     left: 0;
-    background-color: white;
-    border-radius: 2px;
+    background-color: $grey-light1;
+    border-radius: 2px;  
   }
 }
 
-.footer-container {
+.footer-container { 
   padding: 2rem;
   display: flex;
   justify-content: space-between;
@@ -88,11 +88,17 @@ footer {
 .contact-data {
   display: block;
   .tile {
+    display: block;
     font-size: 1.2rem;
     font-family: $font-russo;
     margin: 1rem 0;
     text-decoration: none;
     color: white;
+
+    &:visited {
+      text-decoration: none;
+      color: white;
+    }
 
     &__icon {
       font-size: 2rem;

@@ -43,7 +43,7 @@ header {
   display: flex;
 
   &-text {
-    padding: 10rem 7rem 0 2rem;
+    padding: 8rem 7rem 0 6rem;
     width: 65%;
 
     @media only screen and(max-width:1000px) {
@@ -58,13 +58,25 @@ header {
   }
 
   &__bg {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    font-weight: 800;
+
+    @media only screen and(max-width:600px) {
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
   }
 
   &__sml {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 100;
+    font-family: "Caveat", cursive;
+    max-width: 700px;
+
+    @media only screen and(max-width:600px) {
+      font-size: 2rem;
+    }
   }
 
   &__img {
@@ -83,7 +95,7 @@ header {
 }
 
 .menu-btn {
-  margin-top: 8rem;
+  margin-top: 6rem;
   margin-left: 25%;
   z-index: 200;
   background: linear-gradient(
@@ -102,6 +114,11 @@ header {
   cursor: pointer;
   position: relative;
   border: 1px solid white;
+
+  @media only screen and(max-width:600px) {
+    margin-top: 4rem;
+    margin-left: 1rem;
+  }
 
   @media only screen and(max-width:300px) {
     margin-top: 2rem;
