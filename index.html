@@ -1,861 +1,400 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,
-    initial-scale=1.0,minimum-scale=1"
-    />
-    <meta
-      name="description"
-      content="Фаст-фуд, приготовленный любящими руками и здоровыми ингредиентами"
-    />
-    <link rel="icon" href="assets/images/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Фалафилоо</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="header">
-        <div class="header__main">
-          <div class="hero">
-            <div
-              id="particles-js"
-              style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,
+    initial-scale=1.0,minimum-scale=1" />
+  <meta name="description" content="Фаст-фуд, приготовленный любящими руками и здоровыми ингредиентами" />
+  <link rel="icon" href="assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Фалафилоо</title>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="header__main">
+        <div class="hero">
+          <div id="particles-js" style="
                 position: absolute;
                 width: 100%;
                 height: 80vh;
                 z-index: 150;
-              "
-            ></div>
-            <div class="hero-text">
-              <p class="hero__bg">Фалафилоо</p>
-              <p class="hero__sml">
-                Фаст-фуд, приготовленный любящими руками и здоровыми
-                ингредиентами
-              </p>
-              <button class="menu-btn" id="main-btn">заказать сейчас</button>
-            </div>
-            <figure class="hero__img">
-              <img src="assets/images/floating-beef-burger.png" alt="" />
-            </figure>
+              "></div>
+          <div class="hero-text">
+            <p class="hero__bg">Фалафилоо</p>
+            <p class="hero__sml">
+              Фаст-фуд, приготовленный любящими руками и здоровыми
+              ингредиентами
+            </p>
+            <button class="menu-btn" id="main-btn">заказать сейчас</button>
           </div>
-        </div>
-        <div class="header__sub"></div>
-      </div>
-
-      <button id="burger" class="open-main-nav">
-        <span class="burger"></span>
-      </button>
-      <nav class="main-nav" id="main-nav">
-        <ul>
-          <li>
-            <a href="#" id="homeNav" class="navAnchor">главного</a>
-          </li>
-          <li>
-            <a href="#TheMenu" id="menuNav" class="navAnchor">меню</a>
-          </li>
-          <li>
-            <a href="#aboutSection" id="aboutNav" class="navAnchor"
-              >О компании</a
-            >
-          </li>
-          <li>
-            <a href="#footer" id="contactNav" class="navAnchor">Контактная</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="side-bar" id="sideBar">
-        <button class="close" id="close-btn">&#9747;</button>
-        <div class="side-bar__elem" id="falafel_btn">
-          <p class="side-bar__elem__title">Фалафель</p>
-          <img src="assets/images/falafel_ctg.jpg" alt="" />
-        </div>
-        <div class="side-bar__elem" id="shawarma_btn">
-          <p class="side-bar__elem__title">Шаурма</p>
-          <img src="assets/images/shawarma_ctg.jpg" alt="Shawarma" />
-        </div>
-        <div class="side-bar__elem" id="broasted_btn">
-          <p class="side-bar__elem__title">Хрустящие</p>
-          <img src="assets/images/broasted_ctg.jpg" alt="Broasteds" />
-        </div>
-        <div class="side-bar__elem" id="burger_btn">
-          <p class="side-bar__elem__title">Бургеры</p>
-          <img src="assets/images/burger_ctg.webp" alt="Burger" />
-        </div>
-        <div class="side-bar__elem" id="barbecue_btn">
-          <p class="side-bar__elem__title">Шашлык</p>
-          <img src="assets/images/barbecue_ctg.jpg" alt="barbecue" />
-        </div>
-        <div class="side-bar__elem" id="apptizers_btn">
-          <p class="side-bar__elem__title">Закуски</p>
-          <img src="assets/images/apptizers_ctg.jpg" alt="Apptizers" />
+          <figure class="hero__img">
+            <img src="assets/images/floating-beef-burger.png" alt="" />
+          </figure>
         </div>
       </div>
-      <button class="side-btn">категории</button>
-    </header>
-    <main>
-      <section class="menu" id="TheMenu">
-        <div class="firstContainer" id="shawarma_ctg">
-          <p class="firstContainer__title">Шаурма</p>
-          <div class="mealItem" id="00">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/1.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Шаурма от шеф повара</p>
-          </div>
-          <div class="mealItem" id="01">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/2.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Шаурма</p>
-          </div>
-          <div class="mealItem" id="02">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/1.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Шаурма от шефа /большая/</p>
-          </div>
-          <div class="mealItem" id="03">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/4.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Шаурма по Арабски</p>
-          </div>
-          <div class="mealItem" id="04">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/3.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Мексикану</p>
-          </div>
-          <div class="mealItem" id="05">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/5.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Шаурма панне</p>
-          </div>
-          <div class="mealItem" id="06">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/6.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Цезарь ролл</p>
-          </div>
+      <div class="header__sub"></div>
+    </div>
+
+    <button id="burger" class="open-main-nav">
+      <span class="burger"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li>
+          <a href="#" id="homeNav" class="navAnchor">главного</a>
+        </li>
+        <li>
+          <a href="#TheMenu" id="menuNav" class="navAnchor">меню</a>
+        </li>
+        <li>
+          <a href="#aboutSection" id="aboutNav" class="navAnchor">О компании</a>
+        </li>
+        <li>
+          <a href="#footer" id="contactNav" class="navAnchor">Контактная</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="side-btn">категории</button>
+  </header>
+  <main>
+    <section class="menu" id="TheMenu">
+
+    </section>
+    <section class="about" id="aboutSection">
+      <p class="heading" id="opening">
+        От старейшего города мира (Алеппо, Сирия) до самой большой страны мира
+        Россия.
+      </p>
+      <div class="chapter">
+        <div class="chapter__paragraph">
+          Молодые люди начали свой путь из старейшего населенного города мира.
+          12200 лет по данным ЮНЕСКО. <br />
+          мы приехали в эту страну, неся сердце истории Алеппо и его
+          натуральные ароматы, которые возникли в рассказах наших бабушек на
+          протяжении более 122 веков. <br />
+          этого возраста достаточно, чтобы завершить восточную кухню в целом и
+          кухню Алеппо в частности.
         </div>
-        <div class="firstContainer" id="broasted_ctg">
-          <p class="firstContainer__title">Хрустящие</p>
-          <div class="mealItem" id="10">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/8.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Крылышки 8шт</p>
-          </div>
-          <div class="mealItem" id="11">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/8.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Крылышки 16шт</p>
-          </div>
-          <div class="mealItem" id="12">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/9.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Комбо 8шт</p>
-          </div>
-          <div class="mealItem" id="13">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/9.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Комбо 16шт</p>
-          </div>
+        <div class="chapter__img">
+          <img src="assets/images/aleppo-citadel.webp" onContextMenu="return false;" alt="" />
         </div>
-        <div class="firstContainer" id="burger_ctg">
-          <p class="firstContainer__title">Бургеры</p>
-          <div class="mealItem" id="20">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/10.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Бургер от шеф-повара</p>
-          </div>
-          <div class="mealItem" id="21">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/11.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Бургер от шеф-повара</p>
-          </div>
-          <div class="mealItem" id="22">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/12.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Комбо от шеф-повара баранина</p>
-          </div>
-          <div class="mealItem" id="23">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/12.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Комбо от шеф-повара курица</p>
-          </div>
+      </div>
+      <div class="chapter">
+        <div class="chapter__img">
+          <img src="assets/images/trade-route.webp" onContextMenu="return false;" alt="" />
         </div>
-        <div class="firstContainer" id="burger_ctg">
-          <p class="firstContainer__title">Вегетерианское</p>
-          <div class="mealItem" id="30">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/13.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Бургер Фалафель</p>
-          </div>
-          <div class="mealItem" id="31">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/14.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Сэндвич салатом с сыром</p>
-          </div>
-          <div class="mealItem" id="32">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/15.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Сэндвич с картошкой</p>
-          </div>
-        </div>
-        <div class="firstContainer" id="falafel_ctg">
-          <p class="firstContainer__title">Фалафель</p>
-          <div class="mealItem" id="40">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/16.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Фалафель</p>
-          </div>
-          <div class="mealItem" id="41">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/17.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Фалафель по Арабски</p>
-          </div>
-          <div class="mealItem" id="42">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/18.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Уджа с мясом</p>
-          </div>
-          <div class="mealItem" id="43">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/19.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Уджа</p>
-          </div>
-          <div class="mealItem" id="44">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/20.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Фалафель штучный</p>
-          </div>
-        </div>
-        <div class="firstContainer" id="barbeque_ctg">
-          <p class="firstContainer__title">Шашлык</p>
-          <div class="mealItem" id="50">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/21.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Люля кебаб</p>
-          </div>
-          <div class="mealItem" id="51">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/22.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Шашлык (баранина)</p>
-          </div>
-          <div class="mealItem" id="52">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/23.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Шиш тауук</p>
-          </div>
-          <div class="mealItem" id="53">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/24.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Шашлык в</p>
-          </div>
-          <div class="mealItem" id="54">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/24.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Шашлык в</p>
-          </div>
-        </div>
-        <div class="firstContainer" id="apptizers_ctg">
-          <p class="firstContainer__title">Закуски</p>
-          <div class="mealItem" id="60">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/25.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Фри</p>
-          </div>
-          <div class="mealItem" id="61">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/25.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Фри</p>
-          </div>
-          <div class="mealItem" id="62">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/26.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Фри (большая)</p>
-          </div>
-          <div class="mealItem" id="63">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/27.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">АРАЕС с мясом</p>
-          </div>
-          <div class="mealItem" id="64">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/28.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Араес Сыр (веган)</p>
-          </div>
-          <div class="mealItem" id="65">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/29.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">АРАЕС мясом с сыром</p>
-          </div>
-          <div class="mealItem" id="66">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/30.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Суджук</p>
-          </div>
-          <div class="mealItem" id="67">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/31.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">АРАЕС сыр</p>
-          </div>
-          <div class="mealItem" id="68">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/31.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">АРАЕС аджика</p>
-          </div>
-          <div class="mealItem" id="69">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/32.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Хумус (сезонный)</p>
-          </div>
-          <div class="mealItem" id="610">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/33.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Мтапал (сезонный)</p>
-          </div>
-          <div class="mealItem" id="611">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/34.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Табуле</p>
-          </div>
-          <div class="mealItem" id="612">
-            <figure class="mealItem__main">
-              <img
-                src="assets/images/35.webp"
-                alt="meal Image"
-                onContextMenu="return false;"
-                class="mealItem__main__img"
-              />
-            </figure>
-            <p class="mealItem__title">Арабский салат</p>
-          </div>
-        </div>
-      </section>
-      <section class="about" id="aboutSection">
-        <p class="heading" id="opening">
-          От старейшего города мира (Алеппо, Сирия) до самой большой страны мира
-          Россия.
+        <p class="chapter__paragraph">
+          Помимо того, что он является одним из самых важных узлов на
+          исторически известном Шелковом пути, он сохранил свои позиции в
+          качестве исторически важного коммерческого узла, который прославил
+          его международными вкусами и стремится получить лучшее из лучшего.
         </p>
-        <div class="chapter">
-          <div class="chapter__paragraph">
-            Молодые люди начали свой путь из старейшего населенного города мира.
-            12200 лет по данным ЮНЕСКО. <br />
-            мы приехали в эту страну, неся сердце истории Алеппо и его
-            натуральные ароматы, которые возникли в рассказах наших бабушек на
-            протяжении более 122 веков. <br />
-            этого возраста достаточно, чтобы завершить восточную кухню в целом и
-            кухню Алеппо в частности.
-          </div>
-          <div class="chapter__img">
-            <img
-              src="assets/images/aleppo-citadel.webp"
-              onContextMenu="return false;"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="chapter">
-          <div class="chapter__img">
-            <img
-              src="assets/images/trade-route.webp"
-              onContextMenu="return false;"
-              alt=""
-            />
-          </div>
-          <p class="chapter__paragraph">
-            Помимо того, что он является одним из самых важных узлов на
-            исторически известном Шелковом пути, он сохранил свои позиции в
-            качестве исторически важного коммерческого узла, который прославил
-            его международными вкусами и стремится получить лучшее из лучшего.
-          </p>
-        </div>
-        <p class="heading"></p>
-        <div class="chapter">
-          <p class="chapter__paragraph">
-            Мы в Фалафилоо с большой любовью готовим эти рецепты из полезных
-            ингредиентов и натуральных специй, чтобы завершить историю восточных
-            блюд в России, которые вы обязательно должны попробовать.
-          </p>
-          <div class="chapter__img">
-            <img
-              src="assets/images/aleppo-cusin.webp"
-              onContextMenu="return false;"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="chapter">
-          <div class="chapter__img">
-            <img
-              src="assets/images/peper.webp"
-              onContextMenu="return false;"
-              alt=""
-            />
-          </div>
-          <p class="chapter__paragraph">
-            Специи Алеппо натуральные и полезные, в них нет искусственных
-            ароматизаторов. <br />
-            Научные исследования доказали, что постоянное употребление
-            усилителей вкуса и консервантов приводит к серьезным рискам для
-            здоровья, которые могут проявиться не сразу.
-          </p>
-        </div>
-        <div class="chapter">
-          <p class="chapter__paragraph">
-            Мы в Фалафилоо ставим здоровье на первое место вместе с характерным
-            вкусом. Поэтому мы используем куриное и овечье мясо (халяль) с
-            натуральными специями, чтобы обеспечить организм энергией на целый
-            день.
-          </p>
-          <div class="chapter__img">
-            <img
-              src="assets/images/human-power.webp"
-              onContextMenu="return false;"
-              alt=""
-            />
-          </div>
-        </div>
-        <p class="heading">
-          Алеппская кухня исторически является одной из самых известных кухонь,
-          тем более что многие блюда Алеппо стали известными и распространились
-          по всему миру. Такие как фалафель, шаурма, кебаб, а также множество
-          закусок и десертов.
+      </div>
+      <p class="heading"></p>
+      <div class="chapter">
+        <p class="chapter__paragraph">
+          Мы в Фалафилоо с большой любовью готовим эти рецепты из полезных
+          ингредиентов и натуральных специй, чтобы завершить историю восточных
+          блюд в России, которые вы обязательно должны попробовать.
         </p>
-        <div class="chapter">
-          <div class="chapter__img">
-            <img
-              src="assets/images/syrial-land.webp"
-              onContextMenu="return false;"
-              alt=""
-            />
-          </div>
-          <p class="chapter__paragraph">
-            Мы в Фалафилоо стремимся представить наш город народу России.
-          </p>
+        <div class="chapter__img">
+          <img src="assets/images/aleppo-cusin.webp" onContextMenu="return false;" alt="" />
         </div>
-        <p class="heading">
-          Нашим первым шагом был ресторан быстрого питания, который известен на
-          Востоке. Мы также предлагаем западные блюда с большим вниманием к
-          деталям вкуса и здоровья. Мы предлагаем свежие блюда, приготовленные
-          сразу по запросу.
-        </p>
-        <div class="chapter">
-          <div class="chapter__img">
-            <img
-              src="assets/images/russian-flag.webp"
-              onContextMenu="return false;"
-              alt=""
-            />
-          </div>
-          <p class="chapter__paragraph">
-            Мы благодарим Россию и ее любящих людей, которые восприняли наш опыт
-            и остались довольны нашей вкусной едой.
-          </p>
+      </div>
+      <div class="chapter">
+        <div class="chapter__img">
+          <img src="assets/images/peper.webp" onContextMenu="return false;" alt="" />
         </div>
-        <p class="heading">
-          Мы делимся своим успехом с местными компаниями, чтобы доставить
-          удовольствие нашим клиентам. поскольку мы сотрудничаем с сайтами
-          онлайн-заказа и доставки на дом.
+        <p class="chapter__paragraph">
+          Специи Алеппо натуральные и полезные, в них нет искусственных
+          ароматизаторов. <br />
+          Научные исследования доказали, что постоянное употребление
+          усилителей вкуса и консервантов приводит к серьезным рискам для
+          здоровья, которые могут проявиться не сразу.
         </p>
-      </section>
-    </main>
-    <footer id="footer">
-      <div class="footer__title">Фалафилоо</div>
-      <div class="footer-container">
-        <div class="contact-data">
-          <div class="tile">
-            <ion-icon name="time-outline" class="tile__icon"></ion-icon> 10AM -
-            10PM
-          </div>
-          <div class="tile">
-            <ion-icon name="call-outline" class="tile__icon"></ion-icon> +7(915)
-            200-08-09
-          </div>
-          <a class="tile" target="_blank" href="mailto:falafeloo.ru@gmail.com">
-            <ion-icon name="mail-outline" class="tile__icon"></ion-icon>
-            falafeloo.ru@gmail.com
+      </div>
+      <div class="chapter">
+        <p class="chapter__paragraph">
+          Мы в Фалафилоо ставим здоровье на первое место вместе с характерным
+          вкусом. Поэтому мы используем куриное и овечье мясо (халяль) с
+          натуральными специями, чтобы обеспечить организм энергией на целый
+          день.
+        </p>
+        <div class="chapter__img">
+          <img src="assets/images/human-power.webp" onContextMenu="return false;" alt="" />
+        </div>
+      </div>
+      <p class="heading">
+        Алеппская кухня исторически является одной из самых известных кухонь,
+        тем более что многие блюда Алеппо стали известными и распространились
+        по всему миру. Такие как фалафель, шаурма, кебаб, а также множество
+        закусок и десертов.
+      </p>
+      <div class="chapter">
+        <div class="chapter__img">
+          <img src="assets/images/syrial-land.webp" onContextMenu="return false;" alt="" />
+        </div>
+        <p class="chapter__paragraph">
+          Мы в Фалафилоо стремимся представить наш город народу России.
+        </p>
+      </div>
+      <p class="heading">
+        Нашим первым шагом был ресторан быстрого питания, который известен на
+        Востоке. Мы также предлагаем западные блюда с большим вниманием к
+        деталям вкуса и здоровья. Мы предлагаем свежие блюда, приготовленные
+        сразу по запросу.
+      </p>
+      <div class="chapter">
+        <div class="chapter__img">
+          <img src="assets/images/russian-flag.webp" onContextMenu="return false;" alt="" />
+        </div>
+        <p class="chapter__paragraph">
+          Мы благодарим Россию и ее любящих людей, которые восприняли наш опыт
+          и остались довольны нашей вкусной едой.
+        </p>
+      </div>
+      <p class="heading">
+        Мы делимся своим успехом с местными компаниями, чтобы доставить
+        удовольствие нашим клиентам. поскольку мы сотрудничаем с сайтами
+        онлайн-заказа и доставки на дом.
+      </p>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="footer__title">Фалафилоо</div>
+    <div class="footer-container">
+      <div class="contact-data">
+        <div class="tile">
+          <ion-icon name="time-outline" class="tile__icon"></ion-icon> 10AM -
+          10PM
+        </div>
+        <div class="tile">
+          <ion-icon name="call-outline" class="tile__icon"></ion-icon> +7(915)
+          200-08-09
+        </div>
+        <a class="tile" target="_blank" href="mailto:falafeloo.ru@gmail.com">
+          <ion-icon name="mail-outline" class="tile__icon"></ion-icon>
+          falafeloo.ru@gmail.com
+        </a>
+        <div class="footer__nav">
+          <a class="footer__nav__element" href="https://www.facebook.com/falafeloo.ru" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
           </a>
-          <div class="footer__nav">
-            <a
-              class="footer__nav__element"
-              href="https://www.facebook.com/falafeloo.ru"
-              target="_blank"
-            >
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-            <a
-              class="footer__nav__element"
-              href="https://m.youtube.com/channel/UCIXOCJI-EmHTxkJQ2wlCmfQ/featured"
-              target="_blank"
-            >
-              <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-            <a
-              class="footer__nav__element"
-              href="https://www.instagram.com/falafeloo.ru/"
-              target="_blank"
-            >
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a
-              class="footer__nav__element"
-              href="https://www.tiktok.com/@falafiloo.ru"
-              target="_blank"
-            >
-              <ion-icon name="logo-tiktok"></ion-icon>
-            </a>
-          </div>
-        </div>
-        <div class="mapouter">
-          <div class="gmap_canvas">
-            <iframe
-              width="250"
-              height="200"
-              id="gmap_canvas"
-              src="https://maps.google.com/maps?q=Proyezd%20Ugreshskiy,%202,%20Kotelniki,%20Moskovskaya%20oblast',%20Russia,%20140091&t=&z=17&ie=UTF8&iwloc=&output=embed"
-              frameborder=""
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-            ></iframe
-            ><a href="https://123movies-to.org"></a><br />
-            <a href="https://www.embedgooglemap.net"
-              >interactive google map for website</a
-            >
-          </div>
+          <a class="footer__nav__element" href="https://m.youtube.com/channel/UCIXOCJI-EmHTxkJQ2wlCmfQ/featured"
+            target="_blank">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+          <a class="footer__nav__element" href="https://www.instagram.com/falafeloo.ru/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a class="footer__nav__element" href="https://www.tiktok.com/@falafiloo.ru" target="_blank">
+            <ion-icon name="logo-tiktok"></ion-icon>
+          </a>
         </div>
       </div>
-    </footer>
-    <div class="modal">
-      <div class="modal__content">
-        <span class="close-button">&times;</span>
-        <div class="modal__mealImage">
-          <img
-            src="assets/images/33.webp"
-            onContextMenu="return false;"
-            alt=""
-          />
-        </div>
-        <div class="modal__txt">
-          <p class="modal__txt-title">АРАЕС сыр</p>
-          <p class="modal__txt-description">
-            Мясо баранины со специальной приправой, чеснок, помидор, огурец
-            соленый.
-          </p>
-          <div class="modal__order">
-            <a
-              class="modal__order-btn"
-              href="https://eda.yandex.ru/showcaptcha?retpath=https%3A//eda.yandex.ru/restaurant/falafiloo_ugreshskij_proezd_2%3F_9c8494f5f141aadf3dc899da0fbe32e8&t=2/1632329933/d572fb8382a425447bd3fe48ec3146cf&u=9f9577ef-578e9b74-ae1b9af8-c0877754&s=006b784b4481dc809b9aeae14d6ef350"
-              target="_blank"
-            >
-              <img
-                src="assets/SVGs/yandex.svg"
-                class="modal__order-btn-icon"
-                alt=""
-              />
-              yandex
-            </a>
-            <a
-              class="modal__order-btn"
-              href="https://www.delivery-club.ru/srv/falafiloo_moskva?vendorCategoriesQuery=-2"
-              target="_blank"
-            >
-              <img
-                src="assets/SVGs/deliveryClup.svg"
-                class="modal__order-btn-icon"
-                alt=""
-              />
-              deliveryClup
-            </a>
-          </div>
+      <div class="mapouter">
+        <div class="gmap_canvas">
+          <iframe width="250" height="200" id="gmap_canvas"
+            src="https://maps.google.com/maps?q=Proyezd%20Ugreshskiy,%202,%20Kotelniki,%20Moskovskaya%20oblast',%20Russia,%20140091&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            frameborder="" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+            href="https://123movies-to.org"></a><br />
+          <a href="https://www.embedgooglemap.net">interactive google map for website</a>
         </div>
       </div>
     </div>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
 
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyBupSe-um10yw1OgzeO_lihRRDqBU18rLE",
-        authDomain: "falafeelo-cf34c.firebaseapp.com",
-        projectId: "falafeelo-cf34c",
-        storageBucket: "falafeelo-cf34c.appspot.com",
-        messagingSenderId: "514793253702",
-        appId: "1:514793253702:web:8ec03cf2a6287574631347",
-        measurementId: "G-NWE61M7RSS",
-      };
+    <div class="form-add-product" style="padding: 20;">
+      <form id="my_form">
+        <label for="Title">name Product:</label><br>
+        <input required  type="text" id="title" name="Title"><br>
+        <label for="desc">Discription:</label><br>
+        <input  required type="text" id="desc" name="lname">
+        <label for="Price">Price:</label><br>
+        <input  required type="number" id="price" name="price">
+        <label for="Category">Category:</label><br>
+        <select class="select-category" id="category" name="Category">
+          <option value="0">Shawarma</option>
+          <option value="1">Broasted</option>
+          <option value="2">Burger</option>
+          <option value="3">Vegetarian</option>
+          <option value="4">Falafel</option>
+          <option value="5">Barbeque</option>
+          <option value="6">Apptizers</option>
 
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
-    <script src="JS/main.js"></script>
-  </body>
+        </select>
+        
+        <button  type="submit" class="btn btn-primary btn-block" id="submit_btn">Submit</button>
+
+      </form>
+    </div>
+
+
+  </footer>
+  <div class="modal">
+    <div class="modal__content">
+      <span class="close-button">&times;</span>
+      <div class="modal__mealImage">
+        <img src="assets/images/33.webp" onContextMenu="return false;" alt="" />
+      </div>
+      <div class="modal__txt">
+        <p class="modal__txt-title">АРАЕС сыр</p>
+        <p class="modal__txt-description">
+          Мясо баранины со специальной приправой, чеснок, помидор, огурец
+          соленый.
+        </p>
+        <div class="modal__order">
+          <a class="modal__order-btn"
+            href="https://eda.yandex.ru/showcaptcha?retpath=https%3A//eda.yandex.ru/restaurant/falafiloo_ugreshskij_proezd_2%3F_9c8494f5f141aadf3dc899da0fbe32e8&t=2/1632329933/d572fb8382a425447bd3fe48ec3146cf&u=9f9577ef-578e9b74-ae1b9af8-c0877754&s=006b784b4481dc809b9aeae14d6ef350"
+            target="_blank">
+            <img src="assets/SVGs/yandex.svg" class="modal__order-btn-icon" alt="" />
+            yandex
+          </a>
+          <a class="modal__order-btn" href="https://www.delivery-club.ru/srv/falafiloo_moskva?vendorCategoriesQuery=-2"
+            target="_blank">
+            <img src="assets/SVGs/deliveryClup.svg" class="modal__order-btn-icon" alt="" />
+            deliveryClup
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+    // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-analytics.js";
+    import { getFirestore, getDocs, collection, doc, addDoc, setDoc, updateDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyAB6MPsSBZMNHAUctHtPGuTjekxX0ZtCaM",
+      authDomain: "media-bbcd9.firebaseapp.com",
+      projectId: "media-bbcd9",
+      storageBucket: "media-bbcd9.appspot.com",
+      messagingSenderId: "704698318622",
+      appId: "1:704698318622:web:610cec0df06af0d8c0d30f",
+      measurementId: "G-GY4ZZB10MC"
+    };
+   
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    console.log("loading");
+    console.log(await getProduct(db));
+    const submitButton = document.querySelector("#submit_btn");
+    submitButton.addEventListener("click", async function (event) {
+      event.preventDefault();
+      var title = document.getElementById('title').value;
+      var desc = document.getElementById('desc').value;
+      var price = document.getElementById('price').value;
+      var category = document.getElementById('category').value;
+      document.getElementById('submit_btn').textContent="Loading";
+      await updateDoc(doc(db, "meals", "product"), {
+        [category]: arrayUnion({
+          lbl: title,
+          desc: desc,
+          price: price,
+          img:"assets/images/1.webp"
+        })
+      });
+      
+      location.reload();
+      const form = document.getElementById('my_form');
+      form.reset();
+      // var title = document.getElementById('title').value='';
+      // var desc = document.getElementById('desc').value='';
+      // var price = document.getElementById('price').value='';
+
+    });
+    async function getProduct(db) {
+      const col = collection(db, 'meals');
+      const Snapshot = await getDocs(col);
+      console.log("dasssssssss")
+      const productList = Snapshot.docs[0].data();
+
+      let html = document.getElementById("TheMenu"),
+        title = "",
+        id = "";
+      let values = "";
+      const list = Object.values(productList);
+      for (let key in list) {
+        console.log(key)
+
+        switch (key) {
+          case "0":
+            title = "hawarma";
+            id = "shawarma_ctg";
+            break;
+          case "1":
+            title = "Broasted";
+            id = "broasted_ctg";
+            break;
+          case "2":
+            title = "Burger";
+            id = "burger_ctg";
+            break;
+          case "3":
+            title = "Vegetarian";
+            id="Vegetarian_ctg";
+            break;
+          case "4":
+            title = "falafel";
+            id = "falafel_ctg";
+            break;
+          case "5":
+            title = "barbeque";
+            id = "barbeque_ctg";
+            break;
+          case "6":
+            title = "apptizers";
+            id = "apptizers_ctg";
+            break;
+        }
+
+        values += `<div class="firstContainer" id="${id}"> 
+    <p class="firstContainer__title">${title}</p>`; //category title
+        for (let i = 0; i < list[key].length; i++) {
+
+          values += `
+                      <div class="mealItem" id="${key}${i}">
+                          <figure class="mealItem__main">
+                            <img
+                              src="${list[key][i].img}"
+                              alt="meal Image"
+                              onContextMenu="return false;"
+                              class="mealItem__main__img"
+                            />
+                          </figure>
+                          <p class="mealItem__title">${list[key][i].lbl}</p>
+                      </div>
+
+                `;
+
+
+        }
+
+        values += `</div>`;
+
+
+
+
+
+      }
+      html.innerHTML += values;
+      return productList;
+    }
+  </script>
+  <script src="JS/main.js"></script>
+</body>
+
 </html>
+<!-- https://stackoverflow.com/questions/64630552/i-couldnt-add-data-from-my-form-inputs-to-the-firestore-collection-and-i-cant -->

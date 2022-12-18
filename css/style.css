@@ -29,7 +29,40 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden; }
+  .select-category{
+    width: 100%;
+    padding:10px;
+    border-radius:10px;
+    margin-top: 10px;
+    margin-bottom:20px ;
+  }
+  .btn-primary{
+    margin-top: 20px;
+ height: 40px;
+ color: #eee;
+ background-color: #d10909;
+    width: 100%;
+    border-radius: 10px;
+  }
+  input:required + span:after {
+    content: "Required";
+  }
+  input{
+    position: relative;
+    padding:10px;
+    margin:10px 0; 
+    border: 2px solid #eee;
+    padding:10px;
+    border-radius:10px;
+    width:100%;
+    box-sizing:border-box;
+  }
+.form-add-product{
+  display: flex;
+  margin-left: 20px;
+  
 
+}
 .bottom-logo {
   position: fixed;
   background-image: url(../../assets/SVGs/bottom-logo.svg);

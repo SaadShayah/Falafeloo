@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "falafeelo-cf34c"
-  }
+    "default": "falafeelo-cf34c",
+    "media": "media-bbcd9"
+  },
+  "targets": {},
+  "etags": {}
 }
